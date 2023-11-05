@@ -1,0 +1,2399 @@
+####################################
+# 创建者：v2rayse.com
+# 客户端：Clash
+# 创建时间：06-11-2023 00:05:39
+# 使用模版：ok
+# 节点数量：316
+# 节点类型：ss, trojan, vmess
+####################################
+global-client-fingerprint: chrome
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+tproxy-port: 7895
+allow-lan: true
+log-level: info
+cfw-latency-timeout: 8000
+cfw-latency-url: https://api.v2fly.org/checkConnection.svgz
+cfw-proxies-order: latency
+external-controller: 0.0.0.0:9090
+secret: ''
+bind-address: '*'
+unified-delay: true
+profile:
+  store-selected: true
+  store-fake-ip: true
+dns:
+  enable: true
+  ipv6: true
+  use-host: true
+  enhanced-mode: fake-ip
+  listen: 0.0.0.0:7874
+  nameserver:
+    - https://cloudflare-dns.com/dns-query
+    - https://1.1.1.1/dns-query#en0
+    - https://1.1.1.1/dns-query
+    - https://dns.google/dns-query
+    - https://dns.quad9.net/dns-query
+    - https://dns.nextdns.io
+    - https://doh.opendns.com/dns-query
+    - https://dns.adguard.com/dns-query
+    - https://dns.surfshark.com/dns-query
+    - https://8.8.8.8/dns-query
+    - https://9.9.9.9/dns-query
+    - https://doh.cleanbrowsing.org/doh/security-filter/
+    - https://resolver2.dns.watch/dns-query
+    - https://doh-de.blahdns.com/dns-query
+    - https://freedns.controld.com/p2
+    - https://dns.dnswarden.com/adblock
+    - https://adblock.doh.mullvad.net/dns-query
+    - https://basic.rethinkdns.com/dns-query
+    - tls://1.0.0.1:853
+    - tls://1.1.1.1:853
+    - tls://dns.google:853
+    - 162.159.36.1
+    - 162.159.46.1
+    - https://dns.aa.net.uk/dns-query
+    - https://rubyfish.cn/dns-query
+    - https://nsc.torgues.net/dns-query
+    - https://xmission-slc-1.edge.nextdns.io/dns-query
+    - https://Doh1.B-Cdn.net/dns-query
+    - https://dns.melalandia.tk/dns-query
+    - https://jp-kix2.doh.sb/
+    - https://dns.gi.co.id/dns-query
+    - https://dns.controld.com/
+    - https://xtom-osa-1.edge.nextdns.io/dns-query
+    - https://170.176.145.150/
+    - https://ipv4-zepto-mci-1.edge.nextdns.io/dns-query
+    - https://res-acst3.absolight.net/
+    - https://zepto-sto-1.edge.nextdns.io
+    - https://doh.dns.sb/dns-query
+    - tls://dns.rubyfish.cn:853
+    - tls://8.8.8.8#en0
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - '*.lan'
+    - '*.localdomain'
+    - '*.example'
+    - '*.invalid'
+    - '*.localhost'
+    - '*.test'
+    - '*.local'
+    - '*.home.arpa'
+    - time.*.com
+    - time.*.gov
+    - time.*.edu.cn
+    - time.*.apple.com
+    - time1.*.com
+    - time2.*.com
+    - time3.*.com
+    - time4.*.com
+    - time5.*.com
+    - time6.*.com
+    - time7.*.com
+    - ntp.*.com
+    - ntp1.*.com
+    - ntp2.*.com
+    - ntp3.*.com
+    - ntp4.*.com
+    - ntp5.*.com
+    - ntp6.*.com
+    - ntp7.*.com
+    - '*.time.edu.cn'
+    - '*.ntp.org.cn'
+    - +.pool.ntp.org
+    - time1.cloud.tencent.com
+    - music.163.com
+    - '*.music.163.com'
+    - '*.126.net'
+    - musicapi.taihe.com
+    - music.taihe.com
+    - songsearch.kugou.com
+    - trackercdn.kugou.com
+    - '*.kuwo.cn'
+    - api-jooxtt.sanook.com
+    - api.joox.com
+    - joox.com
+    - y.qq.com
+    - '*.y.qq.com'
+    - streamoc.music.tc.qq.com
+    - mobileoc.music.tc.qq.com
+    - isure.stream.qqmusic.qq.com
+    - dl.stream.qqmusic.qq.com
+    - aqqmusic.tc.qq.com
+    - amobile.music.tc.qq.com
+    - '*.xiami.com'
+    - '*.music.migu.cn'
+    - music.migu.cn
+    - '*.msftconnecttest.com'
+    - '*.msftncsi.com'
+    - msftconnecttest.com
+    - msftncsi.com
+    - localhost.ptlogin2.qq.com
+    - localhost.sec.qq.com
+    - +.srv.nintendo.net
+    - +.stun.playstation.net
+    - xbox.*.microsoft.com
+    - xnotify.xboxlive.com
+    - +.battlenet.com.cn
+    - +.wotgame.cn
+    - +.wggames.cn
+    - +.wowsgame.cn
+    - +.wargaming.net
+    - proxy.golang.org
+    - stun.*.*
+    - stun.*.*.*
+    - +.stun.*.*
+    - +.stun.*.*.*
+    - +.stun.*.*.*.*
+    - heartbeat.belkin.com
+    - '*.linksys.com'
+    - '*.linksyssmartwifi.com'
+    - '*.router.asus.com'
+    - mesu.apple.com
+    - swscan.apple.com
+    - swquery.apple.com
+    - swdownload.apple.com
+    - swcdn.apple.com
+    - swdist.apple.com
+    - lens.l.google.com
+    - stun.l.google.com
+    - +.nflxvideo.net
+    - '*.square-enix.com'
+    - '*.finalfantasyxiv.com'
+    - '*.ffxiv.com'
+    - '*.mcdn.bilivideo.cn'
+    - +.media.dssott.com
+
+proxies:
+  - {"name":"فرانسه 🇨🇵 ۲_1","type":"ss","server":"162.19.83.11","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"هلند 🇳🇱 ۲_1","type":"ss","server":"51.158.204.80","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"آلمان 🇩🇪 ۲","type":"ss","server":"141.95.125.11","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"هلند 🇳🇱 ⚡","type":"ss","server":"109.201.152.181","port":443,"password":"shadowsocks","cipher":"aes-128-cfb"}
+  - {"name":"هلند 🇳🇱 ۴_1","type":"ss","server":"51.158.202.199","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"هلند 🇳🇱 ۳_1","type":"ss","server":"51.158.200.138","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"فرانسه 🇨🇵 ⚡","type":"ss","server":"51.159.221.223","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"لندن 🇬🇧 ۲_1","type":"trojan","server":"52.56.183.187","port":443,"udp":true,"password":"your_password","sni":"aws-uk-london-1.f1rocketnode.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇺🇸 تگزاس _1","type":"ss","server":"156.146.38.163","port":443,"password":"shadowsocks","cipher":"aes-128-cfb"}
+  - {"name":"🇺🇸 آریزونا _1","type":"ss","server":"184.170.241.194","port":443,"password":"shadowsocks","cipher":"aes-128-cfb"}
+  - {"name":"لندن 🇬🇧_1","type":"trojan","server":"aws-uk-london-1.f1cflinea.com","port":443,"udp":true,"password":"your_password","sni":"aws-uk-london-1.f1cflinea.com","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/f1rocket","headers":{"host":"aws-uk-london-1.f1cflinea.com"}}}
+  - {"name":"🇮🇷 ایران ","type":"ss","server":"193.142.30.155","port":2120,"password":"faster","cipher":"aes-128-gcm"}
+  - {"name":"فرانسه 🇨🇵 ۴_1","type":"trojan","server":"aws-fr-paris-1.f1cflinea.com","port":443,"udp":true,"password":"your_password","sni":"aws-fr-paris-1.f1cflinea.com","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/f1rocket","headers":{"host":"aws-fr-paris-1.f1cflinea.com"}}}
+  - {"name":"🇸🇬 سنگاپور _1","type":"trojan","server":"18.142.122.247","port":443,"udp":true,"password":"your_password","sni":"aws-sg-1.f1rocketnode.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"هلند 🇳🇱 ۱_1","type":"ss","server":"51.158.200.55","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"فرانسه 🇨🇵 ۱_1","type":"ss","server":"162.19.83.12","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"فرانسه 🇨🇵 ۳_1","type":"ss","server":"51.158.200.166","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"آلمان 🇩🇪 ۳","type":"ss","server":"57.129.1.22","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"لندن 🇬🇧 ۱","type":"ss","server":"198.244.231.26","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"فرانسه 🇨🇵 ۵_1","type":"ss","server":"51.158.200.76","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"هلند 🇳🇱 ۶","type":"ss","server":"51.158.203.4","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"فرانسه 🇨🇵 ۶","type":"ss","server":"57.128.141.15","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"فرانسه 🇨🇵 ۸","type":"ss","server":"162.19.18.107","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"آمریکا 🇺🇸","type":"ss","server":"57.128.32.76","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"⚡🇺🇸 نیوجرسی ","type":"ss","server":"194.116.173.21","port":9038,"password":"gYCYXfkUQEs2TaJQ","cipher":"aes-256-cfb"}
+  - {"name":"فرانسه 🇨🇵 ۱۰","type":"ss","server":"146.59.111.195","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"هلند 🇳🇱🔒","type":"trojan","server":"188.114.99.29","port":443,"udp":true,"password":"a6292090-afe1-4640-97a7-4f1d1d877cf1","sni":"hdfy8c1.foriran.me","skip-cert-verify":false,"network":"grpc","grpc-opts":{"grpc-service-name":"8bHUAD5IX0lC5KffvrsN6rqb"}}
+  - {"name":"سوئیس 🇨🇭_1","type":"ss","server":"156.146.62.160","port":443,"password":"shadowsocks","cipher":"aes-128-cfb"}
+  - {"name":"🇬🇧 لندن ","type":"ss","server":"195.181.165.151","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"هلند 🇳🇱 ۲_2","type":"ss","server":"51.158.202.172","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇺🇸 نیویورک ","type":"ss","server":"89.187.179.192","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇸🇬 سنگاپور _2","type":"trojan","server":"18.142.122.247","port":443,"udp":true,"password":"your_password","sni":"aws-sg-1.f1rocketnode.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"فرانسه 🇨🇵 ۳_2","type":"ss","server":"162.19.83.12","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"فرانسه 🇨🇵 ","type":"ss","server":"51.159.221.223","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"آلمان 🇩🇪 ۱","type":"ss","server":"162.19.139.37","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇺🇸 آریزونا _2","type":"ss","server":"184.170.241.194","port":443,"password":"shadowsocks","cipher":"aes-128-cfb"}
+  - {"name":"فرانسه 🇨🇵 ۲_2","type":"ss","server":"57.128.32.84","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"هلند 🇳🇱 ۱_2","type":"ss","server":"109.201.152.181","port":443,"password":"shadowsocks","cipher":"aes-128-cfb"}
+  - {"name":"🇺🇸 تگزاس _2","type":"ss","server":"156.146.38.163","port":443,"password":"shadowsocks","cipher":"aes-128-cfb"}
+  - {"name":"فرانسه 🇨🇵 ۴_2","type":"ss","server":"57.128.141.15","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"آلمان 🇩🇪 ","type":"ss","server":"162.19.170.225","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"هلند 🇳🇱 ۴_2","type":"ss","server":"51.158.204.42","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"هلند 🇳🇱 ۳_2","type":"ss","server":"51.158.200.150","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":" هلند 🇳🇱 ۵","type":"ss","server":"51.158.202.199","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"فرانسه 🇨🇵 ۷","type":"ss","server":"162.19.59.160","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"فرانسه 🇨🇵 ۵_2","type":"ss","server":"62.210.88.152","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"فرانسه 🇨🇵 ۲_3","type":"ss","server":"162.19.59.169","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"فرانسه 🇨🇵 ۳_3","type":"ss","server":"162.19.18.105","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"هلند 🇳🇱 ۳_3","type":"ss","server":"51.158.200.138","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"هلند 🇳🇱 ۱_3","type":"ss","server":"51.158.200.55","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇳🇱 3","type":"ss","server":"51.158.200.164","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇳🇴 نروژ _1","type":"ss","server":"185.90.61.153","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇸🇪 2","type":"ss","server":"195.181.166.175","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇸🇪 3","type":"ss","server":"195.181.166.174","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇸🇪 4","type":"ss","server":"195.181.166.170","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷16","type":"ss","server":"162.19.18.107","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"فرانسه 🇨🇵 ۲_4","type":"ss","server":"162.19.19.210","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷51.158.37.251","type":"ss","server":"51.158.37.251","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷51.158.61.69","type":"ss","server":"51.158.61.69","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷51.159.104.104","type":"ss","server":"51.159.104.104","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷62.210.88.169","type":"ss","server":"62.210.88.169","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷62.210.88.139","type":"ss","server":"62.210.88.139","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷62.210.88.157","type":"ss","server":"62.210.88.157","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷51.159.221.203","type":"ss","server":"51.159.221.203","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷51.159.222.38","type":"ss","server":"51.159.222.38","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷51.159.222.32","type":"ss","server":"51.159.222.32","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷51.159.222.34","type":"ss","server":"51.159.222.34","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷51.159.222.33","type":"ss","server":"51.159.222.33","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷51.159.222.29","type":"ss","server":"51.159.222.29","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷51.159.222.22","type":"ss","server":"51.159.222.22","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷51.159.222.19","type":"ss","server":"51.159.222.19","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷62.210.88.155","type":"ss","server":"62.210.88.155","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷51.159.221.229","type":"ss","server":"51.159.221.229","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷51.159.221.231","type":"ss","server":"51.159.221.231","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷51.159.221.228","type":"ss","server":"51.159.221.228","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷51.159.221.230","type":"ss","server":"51.159.221.230","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷51.159.221.224","type":"ss","server":"51.159.221.224","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷51.159.221.227","type":"ss","server":"51.159.221.227","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷51.159.221.225","type":"ss","server":"51.159.221.225","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷51.159.221.219","type":"ss","server":"51.159.221.219","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷51","type":"ss","server":"51.158.54.243","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷51.158.54.241","type":"ss","server":"51.158.54.241","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷51.158.54.246","type":"ss","server":"51.158.54.246","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷51.158.54.239","type":"ss","server":"51.158.54.239","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷51.159.107.252","type":"ss","server":"51.159.107.252","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷51.158.54.237","type":"ss","server":"51.158.54.237","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷51.158.54.234","type":"ss","server":"51.158.54.234","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷51.158.54.238","type":"ss","server":"51.158.54.238","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷51.158.54.230","type":"ss","server":"51.158.54.230","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷51.158.54.228","type":"ss","server":"51.158.54.216","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷51.158.54.214","type":"ss","server":"51.158.54.214","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷51.158.54.209","type":"ss","server":"51.158.54.209","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷51.158.54.208","type":"ss","server":"51.158.54.208","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷51.158.54.207","type":"ss","server":"51.158.54.207","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷51.159.211.49","type":"ss","server":"51.159.211.49","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷51.159.210.173","type":"ss","server":"51.159.210.173","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷51.158.61.122","type":"ss","server":"51.158.61.122","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷51.158.61.155","type":"ss","server":"51.158.61.155","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷37.59.21.129","type":"ss","server":"37.59.21.129","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷51.159.222.35","type":"ss","server":"51.159.222.35","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇩🇪5","type":"ss","server":"57.129.1.22","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇬🇧198.244.231.26","type":"ss","server":"198.244.231.26","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇳🇱51.158.195.96","type":"ss","server":"51.158.195.96","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇳🇱51.158.200.145","type":"ss","server":"51.158.200.145","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇳🇱51.158.202.195","type":"ss","server":"51.158.202.195","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇳🇱51.158.202.189","type":"ss","server":"51.158.202.189","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇳🇱51.158.202.186","type":"ss","server":"51.158.202.186","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇳🇱51.158.202.175","type":"ss","server":"51.158.202.175","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇳🇱51.158.200.159","type":"ss","server":"51.158.200.159","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇳🇱51.158.204.59","type":"ss","server":"51.158.204.59","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇳🇱51.158.204.62","type":"ss","server":"51.158.204.62","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇳🇱51.158.204.68","type":"ss","server":"51.158.204.68","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇳🇱51.158.204.25","type":"ss","server":"51.158.204.25","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇳🇱51","type":"ss","server":"51.158.204.81","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇳🇱51.158.203.3","type":"ss","server":"51.158.203.3","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇳🇱51.158.202.254","type":"ss","server":"51.158.202.254","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇳🇱51.158.202.252","type":"ss","server":"51.158.202.252","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇳🇱51.158.200.166","type":"ss","server":"51.158.200.166","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇳🇱51.158.202.251","type":"ss","server":"51.158.202.251","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇳🇱51.158.200.141","type":"ss","server":"51.158.200.141","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇳🇱19","type":"ss","server":"51.158.200.119","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"فرانسه 🇨🇵 🕳️","type":"ss","server":"51.158.200.60","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇳🇱51.","type":"ss","server":"51.158.200.45","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇵🇱146.59.111.195","type":"ss","server":"146.59.111.195","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🚀 🇵🇱 لهستان ","type":"ss","server":"146.59.71.220","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇯🇵 6","type":"ss","server":"84.17.34.112","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇯🇵 5","type":"ss","server":"84.17.34.111","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇯🇵 4","type":"ss","server":"84.17.34.110","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇯🇵 3","type":"ss","server":"84.17.34.109","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇺🇸 1","type":"ss","server":"89.187.185.132","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷57.128.32.81","type":"ss","server":"57.128.32.81","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷162.19.59.165","type":"ss","server":"162.19.59.165","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷162.19.59.164","type":"ss","server":"162.19.59.164","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷162.19.59.162","type":"ss","server":"162.19.59.162","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷62.210.88.167","type":"ss","server":"62.210.88.167","port":80,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷51.159.210.114","type":"ss","server":"51.159.210.114","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷62.210.88.164","type":"ss","server":"62.210.88.164","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"فرانسه 🇨🇵 ۱_2","type":"ss","server":"162.19.83.11","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇳🇱51.158.204.33","type":"ss","server":"51.158.204.33","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇳🇱51.158.200.95","type":"ss","server":"51.158.200.95","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇰🇷KR(AzadNet.t.me)_001","type":"trojan","server":"3.35.157.103","port":443,"udp":true,"password":"your_password","sni":"aws-kr-seoul-1.f1rocketnode.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇳🇱NL-51.158.202.190-0762 | 28.85MB","type":"ss","server":"51.158.202.190","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷62.210.88.168","type":"ss","server":"62.210.88.168","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷62.210.88.148","type":"ss","server":"62.210.88.148","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇳🇱51.158.203.2","type":"ss","server":"51.158.203.2","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇳🇱51.158.204.82","type":"ss","server":"51.158.204.82","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇸🇪 1","type":"ss","server":"195.181.166.176","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇩🇰 دانمارک ۱_1","type":"ss","server":"192.36.27.94","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"بلژیک 🇧🇪 ","type":"ss","server":"192.71.249.146","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇷🇴 رومانی _1","type":"ss","server":"194.14.217.115","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"اکوادور 🇪🇨_1","type":"ss","server":"179.49.5.114","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"امریکا 🇺🇲_1","type":"ss","server":"74.121.191.98","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"کنیا 🇰🇪_1","type":"ss","server":"62.12.116.66","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇬🇷 یونان ","type":"ss","server":"192.71.166.100","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇮🇸 ایسلند ۲_1","type":"ss","server":"37.235.49.152","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇵🇷 پورتوریکو","type":"ss","server":"185.47.255.219","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇮🇸 ایسلند ۱_1","type":"ss","server":"37.235.49.162","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"لندن 🇬🇧 ۲_2","type":"ss","server":"77.72.5.113","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"اوکراین 🇺🇦_1","type":"ss","server":"5.188.6.8","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷 فرانسه ۲ ","type":"ss","server":"51.159.111.208","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇦🇺AU(AzadNet.t.me)_001","type":"trojan","server":"3.27.95.146","port":443,"udp":true,"password":"your_password","sni":"aws-aus-sydney-1.f1rocketnode.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇦🇺AU(AzadNet.t.me)_002","type":"trojan","server":"aws-aus-sydney-1.f1rocketnode.com","port":443,"udp":true,"password":"your_password","sni":"aws-aus-sydney-1.f1rocketnode.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇨🇦CA(AzadNet.t.me)_001","type":"trojan","server":"35.183.238.42","port":443,"udp":true,"password":"your_password","sni":"aws-ca-central-1.f1rocketnode.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇩🇪DE(AzadNet.t.me)_005","type":"trojan","server":"54.93.172.88","port":443,"udp":true,"password":"your_password","sni":"aws-ge-frankfurt-1.f1rocketnode.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇫🇷FR(AzadNet.t.me)_002","type":"trojan","server":"15.236.64.14","port":443,"udp":true,"password":"your_password","sni":"aws-fr-paris-1.f1rocketnode.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"لندن 🇬🇧 🚀","type":"trojan","server":"52.56.183.187","port":443,"udp":true,"password":"your_password","sni":"aws-uk-london-1.f1rocketnode.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇷🇸 صربستان _1","type":"ss","server":"194.71.126.31","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇺🇸US(AzadNet.t.me)_052","type":"trojan","server":"34.222.204.128","port":443,"udp":true,"password":"your_password","sni":"aws-us-oregon-1.f1rocketnode.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇺🇸US(AzadNet.t.me)_053","type":"trojan","server":"15.220.185.180","port":443,"udp":true,"password":"your_password","sni":"aws-mx-queretaro-1.f1rocketnode.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇺🇸US(AzadNet.t.me)_054","type":"trojan","server":"aws-us-oregon-1.f1rocketnode.com","port":443,"udp":true,"password":"your_password","sni":"aws-us-oregon-1.f1rocketnode.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇿🇦ZA(AzadNet.t.me)_001","type":"trojan","server":"13.244.104.87","port":443,"udp":true,"password":"your_password","sni":"aws-za-capetown-1.f1rocketnode.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"اسپانیا 🇪🇦","type":"trojan","server":"aws-es-madrid-1.f1cflinea.com","port":443,"udp":true,"password":"your_password","sni":"aws-es-madrid-1.f1cflinea.com","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/f1rocket","headers":{"host":"aws-es-madrid-1.f1cflinea.com"}}}
+  - {"name":"فرانسه 🇨🇵 تروجان ","type":"trojan","server":"aws-fr-paris-1.f1cflinea.com","port":443,"udp":true,"password":"your_password","sni":"aws-fr-paris-1.f1cflinea.com","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/f1rocket","headers":{"host":"aws-fr-paris-1.f1cflinea.com"}}}
+  - {"name":"ایتالیا 🇮🇹","type":"trojan","server":"aws-it-milan-1.f1cflinea.com","port":443,"udp":true,"password":"your_password","sni":"aws-it-milan-1.f1cflinea.com","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/f1rocket","headers":{"host":"aws-it-milan-1.f1cflinea.com"}}}
+  - {"name":"سوئیس 🇨🇭_2","type":"trojan","server":"aws-ch-zurich-1.f1cflineb.com","port":443,"udp":true,"password":"your_password","sni":"aws-ch-zurich-1.f1cflineb.com","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/f1rocket","headers":{"host":"aws-ch-zurich-1.f1cflineb.com"}}}
+  - {"name":"لندن 🇬🇧_2","type":"trojan","server":"aws-uk-london-1.f1cflinea.com","port":443,"udp":true,"password":"your_password","sni":"aws-uk-london-1.f1cflinea.com","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/f1rocket","headers":{"host":"aws-uk-london-1.f1cflinea.com"}}}
+  - {"name":"آلمان 🇩🇪_1","type":"trojan","server":"aws-ge-frankfurt-1.f1cflineb.com","port":443,"udp":true,"password":"your_password","sni":"aws-ge-frankfurt-1.f1cflineb.com","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/f1rocket","headers":{"host":"aws-ge-frankfurt-1.f1cflineb.com"}}}
+  - {"name":"کانادا 🇨🇦","type":"trojan","server":"aws-ca-central-1.f1rocketnode.com","port":443,"udp":true,"password":"your_password","sni":"aws-ca-central-1.f1rocketnode.com","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/f1rocket","headers":{"host":"aws-ca-central-1.f1rocketnode.com"}}}
+  - {"name":"سوئد 🇸🇪","type":"trojan","server":"aws-se-stockholm-1.f1cflineb.com","port":443,"udp":true,"password":"your_password","sni":"aws-se-stockholm-1.f1cflineb.com","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/f1rocket","headers":{"host":"aws-se-stockholm-1.f1cflineb.com"}}}
+  - {"name":"سنگاپور 🇸🇬","type":"trojan","server":"aws-sg-1.f1cflineb.com","port":443,"udp":true,"password":"your_password","sni":"aws-sg-1.f1cflineb.com","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/f1rocket","headers":{"host":"aws-sg-1.f1cflineb.com"}}}
+  - {"name":"آلمان 🇩🇪_2","type":"trojan","server":"aws-ge-frankfurt-1.f1cflinea.com","port":443,"udp":true,"password":"your_password","sni":"aws-ge-frankfurt-1.f1cflinea.com","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/f1rocket","headers":{"host":"aws-ge-frankfurt-1.f1cflinea.com"}}}
+  - {"name":"🇫🇷57.128.32.145","type":"ss","server":"57.128.32.145","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷51.158.37.46","type":"ss","server":"51.158.37.46","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷51.159.222.39","type":"ss","server":"51.159.222.39","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷51.158.54.240","type":"ss","server":"51.158.54.240","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷51.158.54.229","type":"ss","server":"51.158.54.229","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷51.158.54.210","type":"ss","server":"51.158.54.210","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷51.158.54.211","type":"ss","server":"51.158.54.211","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇩🇪57.129.1.18","type":"ss","server":"57.129.1.18","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇩🇪162.19.170.209","type":"ss","server":"162.19.170.209","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇳🇱51.158.202.193","type":"ss","server":"51.158.202.193","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇳🇱51.158.202.192","type":"ss","server":"51.158.202.192","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇳🇱51.158.202.185","type":"ss","server":"51.158.202.185","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇳🇱51.158.200.158","type":"ss","server":"51.158.200.158","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇳🇱51.158.204.70","type":"ss","server":"51.158.204.70","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇳🇱51.158.203.5","type":"ss","server":"51.158.203.5","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷162.19.204.82","type":"ss","server":"162.19.204.82","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷162.19.83.14","type":"ss","server":"162.19.83.14","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷62.210.88.156","type":"ss","server":"62.210.88.156","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷162.19.83.9","type":"ss","server":"162.19.83.9","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷51.158.37.62","type":"ss","server":"51.158.37.62","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷51.158.54.232","type":"ss","server":"51.158.54.232","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇩🇪141.95.125.11","type":"ss","server":"141.95.125.11","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇩🇪141.95.125.48","type":"ss","server":"141.95.125.48","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇳🇱51.158.203.6","type":"ss","server":"51.158.203.6","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇯🇵JP-152.69.200.60-0127","type":"vmess","server":"jpd.zerodisk.site","port":48493,"cipher":"auto","uuid":"f8ef7c47-9735-439c-a42b-355bae224656","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"jpd.zerodisk.site"}}}
+  - {"name":"🇮🇷IR-185.126.1.155-3153","type":"vmess","server":"de1.cloudfa.pw","port":2083,"cipher":"auto","uuid":"212bf56c-2203-40ee-abc7-9bdb6c39eca4","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"de1.cloudfa.pw"}}}
+  - {"name":"🇮🇷IR-185.126.1.155-3170","type":"vmess","server":"185.126.1.155","port":2083,"cipher":"auto","uuid":"212bf56c-2203-40ee-abc7-9bdb6c39eca4","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"🇨🇦CA-154.12.39.113-1351","type":"vmess","server":"154.12.39.113","port":23566,"cipher":"auto","uuid":"041170e1-95fd-40b1-9bd0-1d28826f97e7","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇨🇦CA-154.12.39.152-1359","type":"vmess","server":"154.12.39.152","port":23566,"cipher":"auto","uuid":"041170e1-95fd-40b1-9bd0-1d28826f97e7","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇺🇸US-47.89.211.175-12960","type":"vmess","server":"47.89.211.175","port":80,"cipher":"auto","uuid":"6cc722d0-f6b5-4179-be13-c15cb9e75dd9","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/84BxD2shFYFpsiRGXACUPqWt"}}
+  - {"name":"🇺🇸US-47.88.87.39-12967","type":"vmess","server":"47.88.87.39","port":80,"cipher":"auto","uuid":"18351862-d953-4ab9-afae-4998dcd56f8b","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/wRDYyXAgH6oASzMKs65VUYw"}}
+  - {"name":"🇺🇸US-212.102.47.198-0609","type":"ss","server":"212.102.47.198","port":443,"password":"shadowsocks","cipher":"aes-128-cfb"}
+  - {"name":"🇫🇷FR-195.154.185.174-0676","type":"ss","server":"195.154.185.174","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷FR-195.154.169.198-0672","type":"ss","server":"195.154.169.198","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇦🇺AU-172.105.191.145-0688","type":"ss","server":"masting.xyz","port":8080,"password":"XvK0ltH67Xhv9ht9RhYsFy","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇦🇹AT-185.180.12.81-0706","type":"ss","server":"185.180.12.81","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇨🇭CH-84.17.53.160-0705","type":"ss","server":"84.17.53.160","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇸🇪SE-121.127.46.147-0733","type":"ss","server":"121.127.46.147","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇺🇸US-194.116.173.21-7900","type":"ss","server":"194.116.173.21","port":9038,"password":"gYCYXfkUQEs2TaJQ","cipher":"aes-256-cfb"}
+  - {"name":"🇧🇬BG-213.183.63.69-7226","type":"ss","server":"213.183.63.69","port":9061,"password":"4R3hUfZ2FHhDmNcP","cipher":"aes-256-cfb"}
+  - {"name":"🇸🇬SG-139.162.5.19-0755","type":"ss","server":"139.162.5.19","port":8099,"password":"eIW0Dnk69454e6nSwuspv9DmS201tQ0D","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷FR-62.210.88.167-0753","type":"ss","server":"62.210.88.167","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇬🇧GB-77.72.5.150-0660","type":"ss","server":"77.72.5.150","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷FR-51.158.195.96-2056","type":"ss","server":"51.158.195.96","port":110,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇮🇲IM-192.71.211.161-7628","type":"ss","server":"192.71.211.161","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇮FI-37.143.129.230-6409","type":"ss","server":"37.143.129.230","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷FR-51.158.195.96-1970","type":"ss","server":"51.158.195.96","port":80,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇲🇽MX-190.103.179.23-6373","type":"ss","server":"190.103.179.23","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇹🇷TR-45.89.52.66-7832","type":"ss","server":"45.89.52.66","port":9041,"password":"U6qnYRhfyDmn8sgn","cipher":"aes-256-cfb"}
+  - {"name":"🇹🇷TR-45.89.52.66-7830","type":"ss","server":"45.89.52.66","port":9037,"password":"TN2YqghxeFDKZfLU","cipher":"aes-256-cfb"}
+  - {"name":"🇹🇷TR-45.89.52.66-7834","type":"ss","server":"45.89.52.66","port":9043,"password":"HSZuyJQcWe8dxNdF","cipher":"aes-256-cfb"}
+  - {"name":"🇹🇷TR-45.89.52.66-7833","type":"ss","server":"45.89.52.66","port":9040,"password":"p9z5BVADH2YFs3MN","cipher":"aes-256-cfb"}
+  - {"name":"🇹🇷TR-45.89.52.66-7831","type":"ss","server":"45.89.52.66","port":9031,"password":"BwcAUZk8hUFAkDGN","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷FR-57.128.32.76-7371","type":"ss","server":"57.128.32.76","port":443,"password":"asdKkaskJKfnsa","cipher":"aes-256-cfb"}
+  - {"name":"🇮🇲IM-37.235.55.21-13038","type":"ss","server":"37.235.55.21","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇭🇷HR-46.183.184.60-7618","type":"ss","server":"46.183.184.60","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇩🇰DK-192.36.27.116-7299","type":"ss","server":"192.36.27.116","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇧🇪BE-192.71.249.71-7225","type":"ss","server":"192.71.249.71","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇵🇱PL-217.30.10.68-13121","type":"ss","server":"217.30.10.68","port":9019,"password":"GA9KzeEgvfxNrgmM","cipher":"aes-256-cfb"}
+  - {"name":"🇭🇷HR-46.183.184.61-7619","type":"ss","server":"46.183.184.61","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇵🇱PL-217.30.10.68-7729","type":"ss","server":"217.30.10.68","port":9057,"password":"wjTugX3ZtHMB9c3Z","cipher":"aes-256-cfb"}
+  - {"name":"🇵🇱PL-217.30.10.68-13127","type":"ss","server":"217.30.10.68","port":9043,"password":"HSZuyJQcWe8dxNdF","cipher":"aes-256-cfb"}
+  - {"name":"🇵🇱PL-217.30.10.68-7730","type":"ss","server":"217.30.10.68","port":9005,"password":"ZET59LF6DvCC8KVt","cipher":"aes-256-cfb"}
+  - {"name":"🇬🇷GR-192.71.166.102-6010","type":"ss","server":"192.71.166.102","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇵🇱PL-217.30.10.68-13129","type":"ss","server":"217.30.10.68","port":9033,"password":"UTJA57ypk2XKQpnm","cipher":"aes-256-cfb"}
+  - {"name":"🇵🇱PL-217.30.10.68-13124","type":"ss","server":"217.30.10.68","port":9011,"password":"M3t2ZEQcMGRWBjRa","cipher":"aes-256-cfb"}
+  - {"name":"🇵🇱PL-217.30.10.68-13136","type":"ss","server":"217.30.10.68","port":9001,"password":"UkXRsXvR6buDMG2Y","cipher":"aes-256-cfb"}
+  - {"name":"🇵🇱PL-217.30.10.68-13122","type":"ss","server":"217.30.10.68","port":9007,"password":"kSPmvwdFzGMMW5pY","cipher":"aes-256-cfb"}
+  - {"name":"🇵🇱PL-217.30.10.68-13118","type":"ss","server":"217.30.10.68","port":9038,"password":"gYCYXfkUQEs2TaJQ","cipher":"aes-256-cfb"}
+  - {"name":"🇦🇲AM-146.185.248.22-7220","type":"ss","server":"146.185.248.22","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇵🇱PL-217.30.10.68-13119","type":"ss","server":"217.30.10.68","port":9000,"password":"a3GFYt36Sm82Vys9","cipher":"aes-256-cfb"}
+  - {"name":"🇵🇱PL-217.30.10.68-13132","type":"ss","server":"217.30.10.68","port":9026,"password":"QWDDvVE9npNurQfA","cipher":"aes-256-cfb"}
+  - {"name":"🇵🇱PL-217.30.10.68-13128","type":"ss","server":"217.30.10.68","port":9073,"password":"daFYagqDdBdA6VTX","cipher":"aes-256-cfb"}
+  - {"name":"🇵🇱PL-217.30.10.68-13123","type":"ss","server":"217.30.10.68","port":9045,"password":"Lp27rqyJq72bZsqX","cipher":"aes-256-cfb"}
+  - {"name":"🇪🇸ES-5.188.181.201-12951","type":"ss","server":"5.188.181.201","port":9040,"password":"p9z5BVADH2YFs3MN","cipher":"aes-256-cfb"}
+  - {"name":"🇪🇸ES-5.188.181.201-12954","type":"ss","server":"5.188.181.201","port":9030,"password":"GeregetR8cvQHzYr","cipher":"aes-256-cfb"}
+  - {"name":"🔒 SS-TCP-NA 🇧🇬 BG-38.54.27.148:989 📡 PING-175.88-MS","type":"ss","server":"38.54.27.148","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🔒 TR-GRPC-TLS 🏴‍☠️ NA-104.25.255.254:443 📡 PING-002.19-MS","type":"trojan","server":"104.25.255.254","port":443,"udp":true,"password":"a6292090-afe1-4640-97a7-4f1d1d877cf1","sni":"hdfy8c1.foriran.me","skip-cert-verify":false,"network":"grpc","grpc-opts":{"grpc-service-name":"8bHUAD5IX0lC5KffvrsN6rqb"}}
+  - {"name":"🔒 TR-GRPC-TLS 🇳🇱 NL-188.114.99.29:443 📡 PING-001.79-MS","type":"trojan","server":"188.114.99.29","port":443,"udp":true,"password":"a6292090-afe1-4640-97a7-4f1d1d877cf1","sni":"hdfy8c1.foriran.me","skip-cert-verify":false,"network":"grpc","grpc-opts":{"grpc-service-name":"8bHUAD5IX0lC5KffvrsN6rqb"}}
+  - {"name":"🔒 TR-WS-TLS 🏴‍☠️ NA-104.21.73.195:443 📡 PING-002.07-MS","type":"trojan","server":"104.21.73.195","port":443,"udp":true,"password":"your_password","sni":"aws-us-nyc-1.f1cflinea.com","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/f1rocket","headers":{"host":"aws-us-nyc-1.f1cflinea.comhttp/1.1"}}}
+  - {"name":"🇺🇸 United States of America 3","type":"ss","server":"216.52.183.243","port":80,"password":"83XvX4Vo%*3a","cipher":"aes-128-gcm","plugin":"obfs-local","plugin-opts":{"mode":"websocket"}}
+  - {"name":"🇺🇸 United States of America 177","type":"vmess","server":"mehdi9.star-one.cfd","port":8880,"cipher":"auto","uuid":"8268eb97-1a2f-46f8-9994-5279ba06dccd","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/forwardv2ray"}}
+  - {"name":"🇺🇸 United States of America 145","type":"vmess","server":"x6.star-one.cfd","port":2095,"cipher":"auto","uuid":"26ffc94a-e138-495a-8196-70472934e033","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/forwardv2ray"}}
+  - {"name":"🇺🇸 United States of America 155","type":"vmess","server":"mehdi10.star-one.cfd","port":2095,"cipher":"auto","uuid":"26ffc94a-e138-495a-8196-70472934e033","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/forwardv2ray"}}
+  - {"name":"🇺🇸 United States of America 68","type":"vmess","server":"forwardv2ray2.star-one.cfd","port":2096,"cipher":"auto","uuid":"36bf9eec-5b81-47a7-bfcb-c9f018ea83ba","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/forwardv2ray"}}
+  - {"name":"🔒 TR-WS-TLS 🏴‍☠️ NA-104.19.145.205:443 📡 PING-001.38-MS","type":"trojan","server":"104.19.145.205","port":443,"udp":true,"password":"a6292090-afe1-4640-97a7-4f1d1d877cf1","sni":"hdfy8c1.foriran.nl","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/8bHUAD5IX0licU6D349brWUw6a","headers":{"host":"hdfy8c1.foriran.nl"}}}
+  - {"name":"🇺🇸 United States of America 115","type":"vmess","server":"mehdi1.star-one.cfd","port":8880,"cipher":"auto","uuid":"8268eb97-1a2f-46f8-9994-5279ba06dccd","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/forwardv2ray"}}
+  - {"name":"🇺🇸 United States of America 126","type":"vmess","server":"q3.star-one.cfd","port":8880,"cipher":"auto","uuid":"8268eb97-1a2f-46f8-9994-5279ba06dccd","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/forwardv2ray"}}
+  - {"name":"🇺🇸 United States of America 44","type":"vmess","server":"w6.star-one.cfd","port":8880,"cipher":"auto","uuid":"8268eb97-1a2f-46f8-9994-5279ba06dccd","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/forwardv2ray"}}
+  - {"name":"🇺🇸 United States of America 147","type":"vmess","server":"forwardv2ray4.star-one.cfd","port":8443,"cipher":"auto","uuid":"f89964ea-f33a-4402-b05c-d0c8956561ec","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/forwardv2ray"}}
+  - {"name":"🇺🇸 United States of America 111","type":"vmess","server":"w4.star-one.cfd","port":80,"cipher":"auto","uuid":"b3876615-7150-4578-88ab-b764e949229d","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/forwardv2ray"}}
+  - {"name":"🇺🇸 United States of America 167","type":"vmess","server":"z1.star-one.cfd","port":2082,"cipher":"auto","uuid":"db2f7e2b-6a85-44d6-9dc9-d45eba241570","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/forwardv2ray"}}
+  - {"name":"🇺🇸 United States of America 180","type":"vmess","server":"forwardv2ray6.star-one.cfd","port":2095,"cipher":"auto","uuid":"26ffc94a-e138-495a-8196-70472934e033","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/forwardv2ray"}}
+  - {"name":"🇺🇸 United States of America 193","type":"vmess","server":"q5.star-one.cfd","port":2095,"cipher":"auto","uuid":"26ffc94a-e138-495a-8196-70472934e033","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/forwardv2ray"}}
+  - {"name":"🇺🇸 United States of America 181","type":"vmess","server":"mehdi8.star-one.cfd","port":2082,"cipher":"auto","uuid":"db2f7e2b-6a85-44d6-9dc9-d45eba241570","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/forwardv2ray"}}
+  - {"name":"🇺🇸 United States of America 14","type":"vmess","server":"w7.star-one.cfd","port":2082,"cipher":"auto","uuid":"db2f7e2b-6a85-44d6-9dc9-d45eba241570","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/forwardv2ray"}}
+  - {"name":"🇺🇸 United States of America 32","type":"vmess","server":"x7.star-one.cfd","port":80,"cipher":"auto","uuid":"b3876615-7150-4578-88ab-b764e949229d","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/forwardv2ray"}}
+  - {"name":"🇺🇸 United States of America 43","type":"vmess","server":"mehdi3.star-one.cfd","port":80,"cipher":"auto","uuid":"b3876615-7150-4578-88ab-b764e949229d","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/forwardv2ray"}}
+  - {"name":"🇺🇸 United States of America 182","type":"vmess","server":"x10.star-one.cfd","port":8880,"cipher":"auto","uuid":"8268eb97-1a2f-46f8-9994-5279ba06dccd","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/forwardv2ray"}}
+  - {"name":"🇺🇸 United States of America 170","type":"vmess","server":"mehdi6.star-one.cfd","port":2082,"cipher":"auto","uuid":"db2f7e2b-6a85-44d6-9dc9-d45eba241570","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/forwardv2ray"}}
+  - {"name":"🇺🇸 United States of America 82","type":"vmess","server":"x5.star-one.cfd","port":2095,"cipher":"auto","uuid":"26ffc94a-e138-495a-8196-70472934e033","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/forwardv2ray"}}
+  - {"name":"🇺🇸 United States of America 113","type":"vmess","server":"w1.star-one.cfd","port":8880,"cipher":"auto","uuid":"8268eb97-1a2f-46f8-9994-5279ba06dccd","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/forwardv2ray"}}
+  - {"name":"🇺🇸 United States of America 148","type":"vmess","server":"mehdi7.star-one.cfd","port":8443,"cipher":"auto","uuid":"f89964ea-f33a-4402-b05c-d0c8956561ec","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/forwardv2ray"}}
+  - {"name":"🇺🇸 United States of America 118","type":"vmess","server":"x1.star-one.cfd","port":8880,"cipher":"auto","uuid":"8268eb97-1a2f-46f8-9994-5279ba06dccd","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/forwardv2ray"}}
+  - {"name":"🇺🇸 United States of America 85","type":"vmess","server":"forwardv2ray5.star-one.cfd","port":80,"cipher":"auto","uuid":"b3876615-7150-4578-88ab-b764e949229d","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/forwardv2ray"}}
+  - {"name":"🇮🇱 اسرائیل _1","type":"ss","server":"193.182.144.240","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇸🇪 سوئد ","type":"ss","server":"121.127.46.147","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇷🇸 صربستان _2","type":"ss","server":"194.71.126.31","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇳🇴 نروژ _2","type":"ss","server":"185.90.61.153","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇩🇰 دانمارک ۱_2","type":"ss","server":"192.36.27.94","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇮 فنلاند ","type":"ss","server":"37.143.129.230","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇭🇷 کرواسی ","type":"ss","server":"46.183.184.61","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇲🇽 مکزیک ","type":"ss","server":"190.103.179.23","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇲🇰 مقدونیه ","type":"ss","server":"46.183.185.37","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"بلژیک 🇧🇪 ۱","type":"ss","server":"192.71.249.146","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇷🇴 رومانی _2","type":"ss","server":"194.14.217.115","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"لندن 🇬🇧 ۲_3","type":"ss","server":"77.72.5.150","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"اکوادور 🇪🇨_2","type":"ss","server":"179.49.5.114","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"جزیره من 🇮🇲","type":"ss","server":"192.71.211.161","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"امریکا 🇺🇲_2","type":"ss","server":"74.121.191.98","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"کنیا 🇰🇪_2","type":"ss","server":"62.12.116.66","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇬🇧 لندن ۱","type":"ss","server":"77.72.5.113","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"فرانسه 🇨🇵 ۲_5","type":"ss","server":"195.154.185.174","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"فرانسه 🇨🇵 ۱_3","type":"ss","server":"51.159.111.208","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"سوئیس 🇨🇭_3","type":"ss","server":"84.17.53.160","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"اوکراین 🇺🇦_2","type":"ss","server":"5.188.6.8","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇧🇪 بلژیک ۲","type":"ss","server":"192.71.249.71","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇩🇰 دانمارک ۲","type":"ss","server":"192.36.27.116","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇮🇱 اسرائیل _2","type":"ss","server":"193.182.144.240","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇮🇸 ایسلند ۱_2","type":"ss","server":"37.235.49.152","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇮🇸 ایسلند ۲_2","type":"ss","server":"37.235.49.162","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"ارمنستان 🇦🇲","type":"ss","server":"146.185.248.22","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"آلمان 🇩🇪_3","type":"ss","server":"109.61.80.225","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇦🇹 اتریش ","type":"ss","server":"185.180.12.81","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇧🇬 بلغارستان ","type":"ss","server":"38.54.27.148","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+proxy-groups:
+  - name: 🔀 نوع انتخاب پروکسی
+    type: select
+    proxies:
+      - خودکار (بهترین پینگ) 🤖
+      - دستی 🤏🏻
+      - پشتیبان (بهترین پینگ) ➡️
+      - توزیع بار (هش سازگار) ♻️
+      - توزیع بار (یکنواخت) ⏳
+      - ⛔ قطع اینترنت
+      - 🛡️ بدون فیلترشکن
+  - name: 📶 انتخاب نوع اتصال
+    type: select
+    proxies:
+      - 🌐 همه سایتا
+      - 🔐 فقط سایتای فیلتر شده
+  - name: دستی 🤏🏻
+    type: select
+    proxies:
+      - فرانسه 🇨🇵 ۲_1
+      - هلند 🇳🇱 ۲_1
+      - آلمان 🇩🇪 ۲
+      - هلند 🇳🇱 ⚡
+      - هلند 🇳🇱 ۴_1
+      - هلند 🇳🇱 ۳_1
+      - فرانسه 🇨🇵 ⚡
+      - لندن 🇬🇧 ۲_1
+      - 🇺🇸 تگزاس _1
+      - 🇺🇸 آریزونا _1
+      - لندن 🇬🇧_1
+      - '🇮🇷 ایران '
+      - فرانسه 🇨🇵 ۴_1
+      - 🇸🇬 سنگاپور _1
+      - هلند 🇳🇱 ۱_1
+      - فرانسه 🇨🇵 ۱_1
+      - فرانسه 🇨🇵 ۳_1
+      - آلمان 🇩🇪 ۳
+      - لندن 🇬🇧 ۱
+      - فرانسه 🇨🇵 ۵_1
+      - هلند 🇳🇱 ۶
+      - فرانسه 🇨🇵 ۶
+      - فرانسه 🇨🇵 ۸
+      - آمریکا 🇺🇸
+      - '⚡🇺🇸 نیوجرسی '
+      - فرانسه 🇨🇵 ۱۰
+      - هلند 🇳🇱🔒
+      - سوئیس 🇨🇭_1
+      - '🇬🇧 لندن '
+      - هلند 🇳🇱 ۲_2
+      - '🇺🇸 نیویورک '
+      - 🇸🇬 سنگاپور _2
+      - فرانسه 🇨🇵 ۳_2
+      - 'فرانسه 🇨🇵 '
+      - آلمان 🇩🇪 ۱
+      - 🇺🇸 آریزونا _2
+      - فرانسه 🇨🇵 ۲_2
+      - هلند 🇳🇱 ۱_2
+      - 🇺🇸 تگزاس _2
+      - فرانسه 🇨🇵 ۴_2
+      - 'آلمان 🇩🇪 '
+      - هلند 🇳🇱 ۴_2
+      - هلند 🇳🇱 ۳_2
+      - ' هلند 🇳🇱 ۵'
+      - فرانسه 🇨🇵 ۷
+      - فرانسه 🇨🇵 ۵_2
+      - فرانسه 🇨🇵 ۲_3
+      - فرانسه 🇨🇵 ۳_3
+      - هلند 🇳🇱 ۳_3
+      - هلند 🇳🇱 ۱_3
+      - 🇳🇱 3
+      - 🇳🇴 نروژ _1
+      - 🇸🇪 2
+      - 🇸🇪 3
+      - 🇸🇪 4
+      - 🇫🇷16
+      - فرانسه 🇨🇵 ۲_4
+      - 🇫🇷51.158.37.251
+      - 🇫🇷51.158.61.69
+      - 🇫🇷51.159.104.104
+      - 🇫🇷62.210.88.169
+      - 🇫🇷62.210.88.139
+      - 🇫🇷62.210.88.157
+      - 🇫🇷51.159.221.203
+      - 🇫🇷51.159.222.38
+      - 🇫🇷51.159.222.32
+      - 🇫🇷51.159.222.34
+      - 🇫🇷51.159.222.33
+      - 🇫🇷51.159.222.29
+      - 🇫🇷51.159.222.22
+      - 🇫🇷51.159.222.19
+      - 🇫🇷62.210.88.155
+      - 🇫🇷51.159.221.229
+      - 🇫🇷51.159.221.231
+      - 🇫🇷51.159.221.228
+      - 🇫🇷51.159.221.230
+      - 🇫🇷51.159.221.224
+      - 🇫🇷51.159.221.227
+      - 🇫🇷51.159.221.225
+      - 🇫🇷51.159.221.219
+      - 🇫🇷51
+      - 🇫🇷51.158.54.241
+      - 🇫🇷51.158.54.246
+      - 🇫🇷51.158.54.239
+      - 🇫🇷51.159.107.252
+      - 🇫🇷51.158.54.237
+      - 🇫🇷51.158.54.234
+      - 🇫🇷51.158.54.238
+      - 🇫🇷51.158.54.230
+      - 🇫🇷51.158.54.228
+      - 🇫🇷51.158.54.214
+      - 🇫🇷51.158.54.209
+      - 🇫🇷51.158.54.208
+      - 🇫🇷51.158.54.207
+      - 🇫🇷51.159.211.49
+      - 🇫🇷51.159.210.173
+      - 🇫🇷51.158.61.122
+      - 🇫🇷51.158.61.155
+      - 🇫🇷37.59.21.129
+      - 🇫🇷51.159.222.35
+      - 🇩🇪5
+      - 🇬🇧198.244.231.26
+      - 🇳🇱51.158.195.96
+      - 🇳🇱51.158.200.145
+      - 🇳🇱51.158.202.195
+      - 🇳🇱51.158.202.189
+      - 🇳🇱51.158.202.186
+      - 🇳🇱51.158.202.175
+      - 🇳🇱51.158.200.159
+      - 🇳🇱51.158.204.59
+      - 🇳🇱51.158.204.62
+      - 🇳🇱51.158.204.68
+      - 🇳🇱51.158.204.25
+      - 🇳🇱51
+      - 🇳🇱51.158.203.3
+      - 🇳🇱51.158.202.254
+      - 🇳🇱51.158.202.252
+      - 🇳🇱51.158.200.166
+      - 🇳🇱51.158.202.251
+      - 🇳🇱51.158.200.141
+      - 🇳🇱19
+      - فرانسه 🇨🇵 🕳️
+      - 🇳🇱51.
+      - 🇵🇱146.59.111.195
+      - '🚀 🇵🇱 لهستان '
+      - 🇯🇵 6
+      - 🇯🇵 5
+      - 🇯🇵 4
+      - 🇯🇵 3
+      - 🇺🇸 1
+      - 🇫🇷57.128.32.81
+      - 🇫🇷162.19.59.165
+      - 🇫🇷162.19.59.164
+      - 🇫🇷162.19.59.162
+      - 🇫🇷62.210.88.167
+      - 🇫🇷51.159.210.114
+      - 🇫🇷62.210.88.164
+      - فرانسه 🇨🇵 ۱_2
+      - 🇳🇱51.158.204.33
+      - 🇳🇱51.158.200.95
+      - 🇰🇷KR(AzadNet.t.me)_001
+      - 🇳🇱NL-51.158.202.190-0762 | 28.85MB
+      - 🇫🇷62.210.88.168
+      - 🇫🇷62.210.88.148
+      - 🇳🇱51.158.203.2
+      - 🇳🇱51.158.204.82
+      - 🇸🇪 1
+      - 🇩🇰 دانمارک ۱_1
+      - 'بلژیک 🇧🇪 '
+      - 🇷🇴 رومانی _1
+      - اکوادور 🇪🇨_1
+      - امریکا 🇺🇲_1
+      - کنیا 🇰🇪_1
+      - '🇬🇷 یونان '
+      - 🇮🇸 ایسلند ۲_1
+      - 🇵🇷 پورتوریکو
+      - 🇮🇸 ایسلند ۱_1
+      - لندن 🇬🇧 ۲_2
+      - اوکراین 🇺🇦_1
+      - '🇫🇷 فرانسه ۲ '
+      - 🇦🇺AU(AzadNet.t.me)_001
+      - 🇦🇺AU(AzadNet.t.me)_002
+      - 🇨🇦CA(AzadNet.t.me)_001
+      - 🇩🇪DE(AzadNet.t.me)_005
+      - 🇫🇷FR(AzadNet.t.me)_002
+      - لندن 🇬🇧 🚀
+      - 🇷🇸 صربستان _1
+      - 🇺🇸US(AzadNet.t.me)_052
+      - 🇺🇸US(AzadNet.t.me)_053
+      - 🇺🇸US(AzadNet.t.me)_054
+      - 🇿🇦ZA(AzadNet.t.me)_001
+      - اسپانیا 🇪🇦
+      - 'فرانسه 🇨🇵 تروجان '
+      - ایتالیا 🇮🇹
+      - سوئیس 🇨🇭_2
+      - لندن 🇬🇧_2
+      - آلمان 🇩🇪_1
+      - کانادا 🇨🇦
+      - سوئد 🇸🇪
+      - سنگاپور 🇸🇬
+      - آلمان 🇩🇪_2
+      - 🇫🇷57.128.32.145
+      - 🇫🇷51.158.37.46
+      - 🇫🇷51.159.222.39
+      - 🇫🇷51.158.54.240
+      - 🇫🇷51.158.54.229
+      - 🇫🇷51.158.54.210
+      - 🇫🇷51.158.54.211
+      - 🇩🇪57.129.1.18
+      - 🇩🇪162.19.170.209
+      - 🇳🇱51.158.202.193
+      - 🇳🇱51.158.202.192
+      - 🇳🇱51.158.202.185
+      - 🇳🇱51.158.200.158
+      - 🇳🇱51.158.204.70
+      - 🇳🇱51.158.203.5
+      - 🇫🇷162.19.204.82
+      - 🇫🇷162.19.83.14
+      - 🇫🇷62.210.88.156
+      - 🇫🇷162.19.83.9
+      - 🇫🇷51.158.37.62
+      - 🇫🇷51.158.54.232
+      - 🇩🇪141.95.125.11
+      - 🇩🇪141.95.125.48
+      - 🇳🇱51.158.203.6
+      - 🇯🇵JP-152.69.200.60-0127
+      - 🇮🇷IR-185.126.1.155-3153
+      - 🇮🇷IR-185.126.1.155-3170
+      - 🇨🇦CA-154.12.39.113-1351
+      - 🇨🇦CA-154.12.39.152-1359
+      - 🇺🇸US-47.89.211.175-12960
+      - 🇺🇸US-47.88.87.39-12967
+      - 🇺🇸US-212.102.47.198-0609
+      - 🇫🇷FR-195.154.185.174-0676
+      - 🇫🇷FR-195.154.169.198-0672
+      - 🇦🇺AU-172.105.191.145-0688
+      - 🇦🇹AT-185.180.12.81-0706
+      - 🇨🇭CH-84.17.53.160-0705
+      - 🇸🇪SE-121.127.46.147-0733
+      - 🇺🇸US-194.116.173.21-7900
+      - 🇧🇬BG-213.183.63.69-7226
+      - 🇸🇬SG-139.162.5.19-0755
+      - 🇫🇷FR-62.210.88.167-0753
+      - 🇬🇧GB-77.72.5.150-0660
+      - 🇫🇷FR-51.158.195.96-2056
+      - 🇮🇲IM-192.71.211.161-7628
+      - 🇫🇮FI-37.143.129.230-6409
+      - 🇫🇷FR-51.158.195.96-1970
+      - 🇲🇽MX-190.103.179.23-6373
+      - 🇹🇷TR-45.89.52.66-7832
+      - 🇹🇷TR-45.89.52.66-7830
+      - 🇹🇷TR-45.89.52.66-7834
+      - 🇹🇷TR-45.89.52.66-7833
+      - 🇹🇷TR-45.89.52.66-7831
+      - 🇫🇷FR-57.128.32.76-7371
+      - 🇮🇲IM-37.235.55.21-13038
+      - 🇭🇷HR-46.183.184.60-7618
+      - 🇩🇰DK-192.36.27.116-7299
+      - 🇧🇪BE-192.71.249.71-7225
+      - 🇵🇱PL-217.30.10.68-13121
+      - 🇭🇷HR-46.183.184.61-7619
+      - 🇵🇱PL-217.30.10.68-7729
+      - 🇵🇱PL-217.30.10.68-13127
+      - 🇵🇱PL-217.30.10.68-7730
+      - 🇬🇷GR-192.71.166.102-6010
+      - 🇵🇱PL-217.30.10.68-13129
+      - 🇵🇱PL-217.30.10.68-13124
+      - 🇵🇱PL-217.30.10.68-13136
+      - 🇵🇱PL-217.30.10.68-13122
+      - 🇵🇱PL-217.30.10.68-13118
+      - 🇦🇲AM-146.185.248.22-7220
+      - 🇵🇱PL-217.30.10.68-13119
+      - 🇵🇱PL-217.30.10.68-13132
+      - 🇵🇱PL-217.30.10.68-13128
+      - 🇵🇱PL-217.30.10.68-13123
+      - 🇪🇸ES-5.188.181.201-12951
+      - 🇪🇸ES-5.188.181.201-12954
+      - 🔒 SS-TCP-NA 🇧🇬 BG-38.54.27.148:989 📡 PING-175.88-MS
+      - 🔒 TR-GRPC-TLS 🏴‍☠️ NA-104.25.255.254:443 📡 PING-002.19-MS
+      - 🔒 TR-GRPC-TLS 🇳🇱 NL-188.114.99.29:443 📡 PING-001.79-MS
+      - 🔒 TR-WS-TLS 🏴‍☠️ NA-104.21.73.195:443 📡 PING-002.07-MS
+      - 🇺🇸 United States of America 3
+      - 🇺🇸 United States of America 177
+      - 🇺🇸 United States of America 145
+      - 🇺🇸 United States of America 155
+      - 🇺🇸 United States of America 68
+      - 🔒 TR-WS-TLS 🏴‍☠️ NA-104.19.145.205:443 📡 PING-001.38-MS
+      - 🇺🇸 United States of America 115
+      - 🇺🇸 United States of America 126
+      - 🇺🇸 United States of America 44
+      - 🇺🇸 United States of America 147
+      - 🇺🇸 United States of America 111
+      - 🇺🇸 United States of America 167
+      - 🇺🇸 United States of America 180
+      - 🇺🇸 United States of America 193
+      - 🇺🇸 United States of America 181
+      - 🇺🇸 United States of America 14
+      - 🇺🇸 United States of America 32
+      - 🇺🇸 United States of America 43
+      - 🇺🇸 United States of America 182
+      - 🇺🇸 United States of America 170
+      - 🇺🇸 United States of America 82
+      - 🇺🇸 United States of America 113
+      - 🇺🇸 United States of America 148
+      - 🇺🇸 United States of America 118
+      - 🇺🇸 United States of America 85
+      - 🇮🇱 اسرائیل _1
+      - '🇸🇪 سوئد '
+      - 🇷🇸 صربستان _2
+      - 🇳🇴 نروژ _2
+      - 🇩🇰 دانمارک ۱_2
+      - '🇫🇮 فنلاند '
+      - '🇭🇷 کرواسی '
+      - '🇲🇽 مکزیک '
+      - '🇲🇰 مقدونیه '
+      - بلژیک 🇧🇪 ۱
+      - 🇷🇴 رومانی _2
+      - لندن 🇬🇧 ۲_3
+      - اکوادور 🇪🇨_2
+      - جزیره من 🇮🇲
+      - امریکا 🇺🇲_2
+      - کنیا 🇰🇪_2
+      - 🇬🇧 لندن ۱
+      - فرانسه 🇨🇵 ۲_5
+      - فرانسه 🇨🇵 ۱_3
+      - سوئیس 🇨🇭_3
+      - اوکراین 🇺🇦_2
+      - 🇧🇪 بلژیک ۲
+      - 🇩🇰 دانمارک ۲
+      - 🇮🇱 اسرائیل _2
+      - 🇮🇸 ایسلند ۱_2
+      - 🇮🇸 ایسلند ۲_2
+      - ارمنستان 🇦🇲
+      - آلمان 🇩🇪_3
+      - '🇦🇹 اتریش '
+      - '🇧🇬 بلغارستان '
+  - name: خودکار (بهترین پینگ) 🤖
+    type: url-test
+    url: https://api.v2fly.org/checkConnection.svgz
+    interval: 600
+    tolerance: 180
+    proxies:
+      - فرانسه 🇨🇵 ۲_1
+      - هلند 🇳🇱 ۲_1
+      - آلمان 🇩🇪 ۲
+      - هلند 🇳🇱 ⚡
+      - هلند 🇳🇱 ۴_1
+      - هلند 🇳🇱 ۳_1
+      - فرانسه 🇨🇵 ⚡
+      - لندن 🇬🇧 ۲_1
+      - 🇺🇸 تگزاس _1
+      - 🇺🇸 آریزونا _1
+      - لندن 🇬🇧_1
+      - '🇮🇷 ایران '
+      - فرانسه 🇨🇵 ۴_1
+      - 🇸🇬 سنگاپور _1
+      - هلند 🇳🇱 ۱_1
+      - فرانسه 🇨🇵 ۱_1
+      - فرانسه 🇨🇵 ۳_1
+      - آلمان 🇩🇪 ۳
+      - لندن 🇬🇧 ۱
+      - فرانسه 🇨🇵 ۵_1
+      - هلند 🇳🇱 ۶
+      - فرانسه 🇨🇵 ۶
+      - فرانسه 🇨🇵 ۸
+      - آمریکا 🇺🇸
+      - '⚡🇺🇸 نیوجرسی '
+      - فرانسه 🇨🇵 ۱۰
+      - هلند 🇳🇱🔒
+      - سوئیس 🇨🇭_1
+      - '🇬🇧 لندن '
+      - هلند 🇳🇱 ۲_2
+      - '🇺🇸 نیویورک '
+      - 🇸🇬 سنگاپور _2
+      - فرانسه 🇨🇵 ۳_2
+      - 'فرانسه 🇨🇵 '
+      - آلمان 🇩🇪 ۱
+      - 🇺🇸 آریزونا _2
+      - فرانسه 🇨🇵 ۲_2
+      - هلند 🇳🇱 ۱_2
+      - 🇺🇸 تگزاس _2
+      - فرانسه 🇨🇵 ۴_2
+      - 'آلمان 🇩🇪 '
+      - هلند 🇳🇱 ۴_2
+      - هلند 🇳🇱 ۳_2
+      - ' هلند 🇳🇱 ۵'
+      - فرانسه 🇨🇵 ۷
+      - فرانسه 🇨🇵 ۵_2
+      - فرانسه 🇨🇵 ۲_3
+      - فرانسه 🇨🇵 ۳_3
+      - هلند 🇳🇱 ۳_3
+      - هلند 🇳🇱 ۱_3
+      - 🇳🇱 3
+      - 🇳🇴 نروژ _1
+      - 🇸🇪 2
+      - 🇸🇪 3
+      - 🇸🇪 4
+      - 🇫🇷16
+      - فرانسه 🇨🇵 ۲_4
+      - 🇫🇷51.158.37.251
+      - 🇫🇷51.158.61.69
+      - 🇫🇷51.159.104.104
+      - 🇫🇷62.210.88.169
+      - 🇫🇷62.210.88.139
+      - 🇫🇷62.210.88.157
+      - 🇫🇷51.159.221.203
+      - 🇫🇷51.159.222.38
+      - 🇫🇷51.159.222.32
+      - 🇫🇷51.159.222.34
+      - 🇫🇷51.159.222.33
+      - 🇫🇷51.159.222.29
+      - 🇫🇷51.159.222.22
+      - 🇫🇷51.159.222.19
+      - 🇫🇷62.210.88.155
+      - 🇫🇷51.159.221.229
+      - 🇫🇷51.159.221.231
+      - 🇫🇷51.159.221.228
+      - 🇫🇷51.159.221.230
+      - 🇫🇷51.159.221.224
+      - 🇫🇷51.159.221.227
+      - 🇫🇷51.159.221.225
+      - 🇫🇷51.159.221.219
+      - 🇫🇷51
+      - 🇫🇷51.158.54.241
+      - 🇫🇷51.158.54.246
+      - 🇫🇷51.158.54.239
+      - 🇫🇷51.159.107.252
+      - 🇫🇷51.158.54.237
+      - 🇫🇷51.158.54.234
+      - 🇫🇷51.158.54.238
+      - 🇫🇷51.158.54.230
+      - 🇫🇷51.158.54.228
+      - 🇫🇷51.158.54.214
+      - 🇫🇷51.158.54.209
+      - 🇫🇷51.158.54.208
+      - 🇫🇷51.158.54.207
+      - 🇫🇷51.159.211.49
+      - 🇫🇷51.159.210.173
+      - 🇫🇷51.158.61.122
+      - 🇫🇷51.158.61.155
+      - 🇫🇷37.59.21.129
+      - 🇫🇷51.159.222.35
+      - 🇩🇪5
+      - 🇬🇧198.244.231.26
+      - 🇳🇱51.158.195.96
+      - 🇳🇱51.158.200.145
+      - 🇳🇱51.158.202.195
+      - 🇳🇱51.158.202.189
+      - 🇳🇱51.158.202.186
+      - 🇳🇱51.158.202.175
+      - 🇳🇱51.158.200.159
+      - 🇳🇱51.158.204.59
+      - 🇳🇱51.158.204.62
+      - 🇳🇱51.158.204.68
+      - 🇳🇱51.158.204.25
+      - 🇳🇱51
+      - 🇳🇱51.158.203.3
+      - 🇳🇱51.158.202.254
+      - 🇳🇱51.158.202.252
+      - 🇳🇱51.158.200.166
+      - 🇳🇱51.158.202.251
+      - 🇳🇱51.158.200.141
+      - 🇳🇱19
+      - فرانسه 🇨🇵 🕳️
+      - 🇳🇱51.
+      - 🇵🇱146.59.111.195
+      - '🚀 🇵🇱 لهستان '
+      - 🇯🇵 6
+      - 🇯🇵 5
+      - 🇯🇵 4
+      - 🇯🇵 3
+      - 🇺🇸 1
+      - 🇫🇷57.128.32.81
+      - 🇫🇷162.19.59.165
+      - 🇫🇷162.19.59.164
+      - 🇫🇷162.19.59.162
+      - 🇫🇷62.210.88.167
+      - 🇫🇷51.159.210.114
+      - 🇫🇷62.210.88.164
+      - فرانسه 🇨🇵 ۱_2
+      - 🇳🇱51.158.204.33
+      - 🇳🇱51.158.200.95
+      - 🇰🇷KR(AzadNet.t.me)_001
+      - 🇳🇱NL-51.158.202.190-0762 | 28.85MB
+      - 🇫🇷62.210.88.168
+      - 🇫🇷62.210.88.148
+      - 🇳🇱51.158.203.2
+      - 🇳🇱51.158.204.82
+      - 🇸🇪 1
+      - 🇩🇰 دانمارک ۱_1
+      - 'بلژیک 🇧🇪 '
+      - 🇷🇴 رومانی _1
+      - اکوادور 🇪🇨_1
+      - امریکا 🇺🇲_1
+      - کنیا 🇰🇪_1
+      - '🇬🇷 یونان '
+      - 🇮🇸 ایسلند ۲_1
+      - 🇵🇷 پورتوریکو
+      - 🇮🇸 ایسلند ۱_1
+      - لندن 🇬🇧 ۲_2
+      - اوکراین 🇺🇦_1
+      - '🇫🇷 فرانسه ۲ '
+      - 🇦🇺AU(AzadNet.t.me)_001
+      - 🇦🇺AU(AzadNet.t.me)_002
+      - 🇨🇦CA(AzadNet.t.me)_001
+      - 🇩🇪DE(AzadNet.t.me)_005
+      - 🇫🇷FR(AzadNet.t.me)_002
+      - لندن 🇬🇧 🚀
+      - 🇷🇸 صربستان _1
+      - 🇺🇸US(AzadNet.t.me)_052
+      - 🇺🇸US(AzadNet.t.me)_053
+      - 🇺🇸US(AzadNet.t.me)_054
+      - 🇿🇦ZA(AzadNet.t.me)_001
+      - اسپانیا 🇪🇦
+      - 'فرانسه 🇨🇵 تروجان '
+      - ایتالیا 🇮🇹
+      - سوئیس 🇨🇭_2
+      - لندن 🇬🇧_2
+      - آلمان 🇩🇪_1
+      - کانادا 🇨🇦
+      - سوئد 🇸🇪
+      - سنگاپور 🇸🇬
+      - آلمان 🇩🇪_2
+      - 🇫🇷57.128.32.145
+      - 🇫🇷51.158.37.46
+      - 🇫🇷51.159.222.39
+      - 🇫🇷51.158.54.240
+      - 🇫🇷51.158.54.229
+      - 🇫🇷51.158.54.210
+      - 🇫🇷51.158.54.211
+      - 🇩🇪57.129.1.18
+      - 🇩🇪162.19.170.209
+      - 🇳🇱51.158.202.193
+      - 🇳🇱51.158.202.192
+      - 🇳🇱51.158.202.185
+      - 🇳🇱51.158.200.158
+      - 🇳🇱51.158.204.70
+      - 🇳🇱51.158.203.5
+      - 🇫🇷162.19.204.82
+      - 🇫🇷162.19.83.14
+      - 🇫🇷62.210.88.156
+      - 🇫🇷162.19.83.9
+      - 🇫🇷51.158.37.62
+      - 🇫🇷51.158.54.232
+      - 🇩🇪141.95.125.11
+      - 🇩🇪141.95.125.48
+      - 🇳🇱51.158.203.6
+      - 🇯🇵JP-152.69.200.60-0127
+      - 🇮🇷IR-185.126.1.155-3153
+      - 🇮🇷IR-185.126.1.155-3170
+      - 🇨🇦CA-154.12.39.113-1351
+      - 🇨🇦CA-154.12.39.152-1359
+      - 🇺🇸US-47.89.211.175-12960
+      - 🇺🇸US-47.88.87.39-12967
+      - 🇺🇸US-212.102.47.198-0609
+      - 🇫🇷FR-195.154.185.174-0676
+      - 🇫🇷FR-195.154.169.198-0672
+      - 🇦🇺AU-172.105.191.145-0688
+      - 🇦🇹AT-185.180.12.81-0706
+      - 🇨🇭CH-84.17.53.160-0705
+      - 🇸🇪SE-121.127.46.147-0733
+      - 🇺🇸US-194.116.173.21-7900
+      - 🇧🇬BG-213.183.63.69-7226
+      - 🇸🇬SG-139.162.5.19-0755
+      - 🇫🇷FR-62.210.88.167-0753
+      - 🇬🇧GB-77.72.5.150-0660
+      - 🇫🇷FR-51.158.195.96-2056
+      - 🇮🇲IM-192.71.211.161-7628
+      - 🇫🇮FI-37.143.129.230-6409
+      - 🇫🇷FR-51.158.195.96-1970
+      - 🇲🇽MX-190.103.179.23-6373
+      - 🇹🇷TR-45.89.52.66-7832
+      - 🇹🇷TR-45.89.52.66-7830
+      - 🇹🇷TR-45.89.52.66-7834
+      - 🇹🇷TR-45.89.52.66-7833
+      - 🇹🇷TR-45.89.52.66-7831
+      - 🇫🇷FR-57.128.32.76-7371
+      - 🇮🇲IM-37.235.55.21-13038
+      - 🇭🇷HR-46.183.184.60-7618
+      - 🇩🇰DK-192.36.27.116-7299
+      - 🇧🇪BE-192.71.249.71-7225
+      - 🇵🇱PL-217.30.10.68-13121
+      - 🇭🇷HR-46.183.184.61-7619
+      - 🇵🇱PL-217.30.10.68-7729
+      - 🇵🇱PL-217.30.10.68-13127
+      - 🇵🇱PL-217.30.10.68-7730
+      - 🇬🇷GR-192.71.166.102-6010
+      - 🇵🇱PL-217.30.10.68-13129
+      - 🇵🇱PL-217.30.10.68-13124
+      - 🇵🇱PL-217.30.10.68-13136
+      - 🇵🇱PL-217.30.10.68-13122
+      - 🇵🇱PL-217.30.10.68-13118
+      - 🇦🇲AM-146.185.248.22-7220
+      - 🇵🇱PL-217.30.10.68-13119
+      - 🇵🇱PL-217.30.10.68-13132
+      - 🇵🇱PL-217.30.10.68-13128
+      - 🇵🇱PL-217.30.10.68-13123
+      - 🇪🇸ES-5.188.181.201-12951
+      - 🇪🇸ES-5.188.181.201-12954
+      - 🔒 SS-TCP-NA 🇧🇬 BG-38.54.27.148:989 📡 PING-175.88-MS
+      - 🔒 TR-GRPC-TLS 🏴‍☠️ NA-104.25.255.254:443 📡 PING-002.19-MS
+      - 🔒 TR-GRPC-TLS 🇳🇱 NL-188.114.99.29:443 📡 PING-001.79-MS
+      - 🔒 TR-WS-TLS 🏴‍☠️ NA-104.21.73.195:443 📡 PING-002.07-MS
+      - 🇺🇸 United States of America 3
+      - 🇺🇸 United States of America 177
+      - 🇺🇸 United States of America 145
+      - 🇺🇸 United States of America 155
+      - 🇺🇸 United States of America 68
+      - 🔒 TR-WS-TLS 🏴‍☠️ NA-104.19.145.205:443 📡 PING-001.38-MS
+      - 🇺🇸 United States of America 115
+      - 🇺🇸 United States of America 126
+      - 🇺🇸 United States of America 44
+      - 🇺🇸 United States of America 147
+      - 🇺🇸 United States of America 111
+      - 🇺🇸 United States of America 167
+      - 🇺🇸 United States of America 180
+      - 🇺🇸 United States of America 193
+      - 🇺🇸 United States of America 181
+      - 🇺🇸 United States of America 14
+      - 🇺🇸 United States of America 32
+      - 🇺🇸 United States of America 43
+      - 🇺🇸 United States of America 182
+      - 🇺🇸 United States of America 170
+      - 🇺🇸 United States of America 82
+      - 🇺🇸 United States of America 113
+      - 🇺🇸 United States of America 148
+      - 🇺🇸 United States of America 118
+      - 🇺🇸 United States of America 85
+      - 🇮🇱 اسرائیل _1
+      - '🇸🇪 سوئد '
+      - 🇷🇸 صربستان _2
+      - 🇳🇴 نروژ _2
+      - 🇩🇰 دانمارک ۱_2
+      - '🇫🇮 فنلاند '
+      - '🇭🇷 کرواسی '
+      - '🇲🇽 مکزیک '
+      - '🇲🇰 مقدونیه '
+      - بلژیک 🇧🇪 ۱
+      - 🇷🇴 رومانی _2
+      - لندن 🇬🇧 ۲_3
+      - اکوادور 🇪🇨_2
+      - جزیره من 🇮🇲
+      - امریکا 🇺🇲_2
+      - کنیا 🇰🇪_2
+      - 🇬🇧 لندن ۱
+      - فرانسه 🇨🇵 ۲_5
+      - فرانسه 🇨🇵 ۱_3
+      - سوئیس 🇨🇭_3
+      - اوکراین 🇺🇦_2
+      - 🇧🇪 بلژیک ۲
+      - 🇩🇰 دانمارک ۲
+      - 🇮🇱 اسرائیل _2
+      - 🇮🇸 ایسلند ۱_2
+      - 🇮🇸 ایسلند ۲_2
+      - ارمنستان 🇦🇲
+      - آلمان 🇩🇪_3
+      - '🇦🇹 اتریش '
+      - '🇧🇬 بلغارستان '
+  - name: پشتیبان (بهترین پینگ) ➡️
+    type: fallback
+    url: https://api.v2fly.org/checkConnection.svgz
+    interval: 600
+    tolerance: 180
+    proxies:
+      - فرانسه 🇨🇵 ۲_1
+      - هلند 🇳🇱 ۲_1
+      - آلمان 🇩🇪 ۲
+      - هلند 🇳🇱 ⚡
+      - هلند 🇳🇱 ۴_1
+      - هلند 🇳🇱 ۳_1
+      - فرانسه 🇨🇵 ⚡
+      - لندن 🇬🇧 ۲_1
+      - 🇺🇸 تگزاس _1
+      - 🇺🇸 آریزونا _1
+      - لندن 🇬🇧_1
+      - '🇮🇷 ایران '
+      - فرانسه 🇨🇵 ۴_1
+      - 🇸🇬 سنگاپور _1
+      - هلند 🇳🇱 ۱_1
+      - فرانسه 🇨🇵 ۱_1
+      - فرانسه 🇨🇵 ۳_1
+      - آلمان 🇩🇪 ۳
+      - لندن 🇬🇧 ۱
+      - فرانسه 🇨🇵 ۵_1
+      - هلند 🇳🇱 ۶
+      - فرانسه 🇨🇵 ۶
+      - فرانسه 🇨🇵 ۸
+      - آمریکا 🇺🇸
+      - '⚡🇺🇸 نیوجرسی '
+      - فرانسه 🇨🇵 ۱۰
+      - هلند 🇳🇱🔒
+      - سوئیس 🇨🇭_1
+      - '🇬🇧 لندن '
+      - هلند 🇳🇱 ۲_2
+      - '🇺🇸 نیویورک '
+      - 🇸🇬 سنگاپور _2
+      - فرانسه 🇨🇵 ۳_2
+      - 'فرانسه 🇨🇵 '
+      - آلمان 🇩🇪 ۱
+      - 🇺🇸 آریزونا _2
+      - فرانسه 🇨🇵 ۲_2
+      - هلند 🇳🇱 ۱_2
+      - 🇺🇸 تگزاس _2
+      - فرانسه 🇨🇵 ۴_2
+      - 'آلمان 🇩🇪 '
+      - هلند 🇳🇱 ۴_2
+      - هلند 🇳🇱 ۳_2
+      - ' هلند 🇳🇱 ۵'
+      - فرانسه 🇨🇵 ۷
+      - فرانسه 🇨🇵 ۵_2
+      - فرانسه 🇨🇵 ۲_3
+      - فرانسه 🇨🇵 ۳_3
+      - هلند 🇳🇱 ۳_3
+      - هلند 🇳🇱 ۱_3
+      - 🇳🇱 3
+      - 🇳🇴 نروژ _1
+      - 🇸🇪 2
+      - 🇸🇪 3
+      - 🇸🇪 4
+      - 🇫🇷16
+      - فرانسه 🇨🇵 ۲_4
+      - 🇫🇷51.158.37.251
+      - 🇫🇷51.158.61.69
+      - 🇫🇷51.159.104.104
+      - 🇫🇷62.210.88.169
+      - 🇫🇷62.210.88.139
+      - 🇫🇷62.210.88.157
+      - 🇫🇷51.159.221.203
+      - 🇫🇷51.159.222.38
+      - 🇫🇷51.159.222.32
+      - 🇫🇷51.159.222.34
+      - 🇫🇷51.159.222.33
+      - 🇫🇷51.159.222.29
+      - 🇫🇷51.159.222.22
+      - 🇫🇷51.159.222.19
+      - 🇫🇷62.210.88.155
+      - 🇫🇷51.159.221.229
+      - 🇫🇷51.159.221.231
+      - 🇫🇷51.159.221.228
+      - 🇫🇷51.159.221.230
+      - 🇫🇷51.159.221.224
+      - 🇫🇷51.159.221.227
+      - 🇫🇷51.159.221.225
+      - 🇫🇷51.159.221.219
+      - 🇫🇷51
+      - 🇫🇷51.158.54.241
+      - 🇫🇷51.158.54.246
+      - 🇫🇷51.158.54.239
+      - 🇫🇷51.159.107.252
+      - 🇫🇷51.158.54.237
+      - 🇫🇷51.158.54.234
+      - 🇫🇷51.158.54.238
+      - 🇫🇷51.158.54.230
+      - 🇫🇷51.158.54.228
+      - 🇫🇷51.158.54.214
+      - 🇫🇷51.158.54.209
+      - 🇫🇷51.158.54.208
+      - 🇫🇷51.158.54.207
+      - 🇫🇷51.159.211.49
+      - 🇫🇷51.159.210.173
+      - 🇫🇷51.158.61.122
+      - 🇫🇷51.158.61.155
+      - 🇫🇷37.59.21.129
+      - 🇫🇷51.159.222.35
+      - 🇩🇪5
+      - 🇬🇧198.244.231.26
+      - 🇳🇱51.158.195.96
+      - 🇳🇱51.158.200.145
+      - 🇳🇱51.158.202.195
+      - 🇳🇱51.158.202.189
+      - 🇳🇱51.158.202.186
+      - 🇳🇱51.158.202.175
+      - 🇳🇱51.158.200.159
+      - 🇳🇱51.158.204.59
+      - 🇳🇱51.158.204.62
+      - 🇳🇱51.158.204.68
+      - 🇳🇱51.158.204.25
+      - 🇳🇱51
+      - 🇳🇱51.158.203.3
+      - 🇳🇱51.158.202.254
+      - 🇳🇱51.158.202.252
+      - 🇳🇱51.158.200.166
+      - 🇳🇱51.158.202.251
+      - 🇳🇱51.158.200.141
+      - 🇳🇱19
+      - فرانسه 🇨🇵 🕳️
+      - 🇳🇱51.
+      - 🇵🇱146.59.111.195
+      - '🚀 🇵🇱 لهستان '
+      - 🇯🇵 6
+      - 🇯🇵 5
+      - 🇯🇵 4
+      - 🇯🇵 3
+      - 🇺🇸 1
+      - 🇫🇷57.128.32.81
+      - 🇫🇷162.19.59.165
+      - 🇫🇷162.19.59.164
+      - 🇫🇷162.19.59.162
+      - 🇫🇷62.210.88.167
+      - 🇫🇷51.159.210.114
+      - 🇫🇷62.210.88.164
+      - فرانسه 🇨🇵 ۱_2
+      - 🇳🇱51.158.204.33
+      - 🇳🇱51.158.200.95
+      - 🇰🇷KR(AzadNet.t.me)_001
+      - 🇳🇱NL-51.158.202.190-0762 | 28.85MB
+      - 🇫🇷62.210.88.168
+      - 🇫🇷62.210.88.148
+      - 🇳🇱51.158.203.2
+      - 🇳🇱51.158.204.82
+      - 🇸🇪 1
+      - 🇩🇰 دانمارک ۱_1
+      - 'بلژیک 🇧🇪 '
+      - 🇷🇴 رومانی _1
+      - اکوادور 🇪🇨_1
+      - امریکا 🇺🇲_1
+      - کنیا 🇰🇪_1
+      - '🇬🇷 یونان '
+      - 🇮🇸 ایسلند ۲_1
+      - 🇵🇷 پورتوریکو
+      - 🇮🇸 ایسلند ۱_1
+      - لندن 🇬🇧 ۲_2
+      - اوکراین 🇺🇦_1
+      - '🇫🇷 فرانسه ۲ '
+      - 🇦🇺AU(AzadNet.t.me)_001
+      - 🇦🇺AU(AzadNet.t.me)_002
+      - 🇨🇦CA(AzadNet.t.me)_001
+      - 🇩🇪DE(AzadNet.t.me)_005
+      - 🇫🇷FR(AzadNet.t.me)_002
+      - لندن 🇬🇧 🚀
+      - 🇷🇸 صربستان _1
+      - 🇺🇸US(AzadNet.t.me)_052
+      - 🇺🇸US(AzadNet.t.me)_053
+      - 🇺🇸US(AzadNet.t.me)_054
+      - 🇿🇦ZA(AzadNet.t.me)_001
+      - اسپانیا 🇪🇦
+      - 'فرانسه 🇨🇵 تروجان '
+      - ایتالیا 🇮🇹
+      - سوئیس 🇨🇭_2
+      - لندن 🇬🇧_2
+      - آلمان 🇩🇪_1
+      - کانادا 🇨🇦
+      - سوئد 🇸🇪
+      - سنگاپور 🇸🇬
+      - آلمان 🇩🇪_2
+      - 🇫🇷57.128.32.145
+      - 🇫🇷51.158.37.46
+      - 🇫🇷51.159.222.39
+      - 🇫🇷51.158.54.240
+      - 🇫🇷51.158.54.229
+      - 🇫🇷51.158.54.210
+      - 🇫🇷51.158.54.211
+      - 🇩🇪57.129.1.18
+      - 🇩🇪162.19.170.209
+      - 🇳🇱51.158.202.193
+      - 🇳🇱51.158.202.192
+      - 🇳🇱51.158.202.185
+      - 🇳🇱51.158.200.158
+      - 🇳🇱51.158.204.70
+      - 🇳🇱51.158.203.5
+      - 🇫🇷162.19.204.82
+      - 🇫🇷162.19.83.14
+      - 🇫🇷62.210.88.156
+      - 🇫🇷162.19.83.9
+      - 🇫🇷51.158.37.62
+      - 🇫🇷51.158.54.232
+      - 🇩🇪141.95.125.11
+      - 🇩🇪141.95.125.48
+      - 🇳🇱51.158.203.6
+      - 🇯🇵JP-152.69.200.60-0127
+      - 🇮🇷IR-185.126.1.155-3153
+      - 🇮🇷IR-185.126.1.155-3170
+      - 🇨🇦CA-154.12.39.113-1351
+      - 🇨🇦CA-154.12.39.152-1359
+      - 🇺🇸US-47.89.211.175-12960
+      - 🇺🇸US-47.88.87.39-12967
+      - 🇺🇸US-212.102.47.198-0609
+      - 🇫🇷FR-195.154.185.174-0676
+      - 🇫🇷FR-195.154.169.198-0672
+      - 🇦🇺AU-172.105.191.145-0688
+      - 🇦🇹AT-185.180.12.81-0706
+      - 🇨🇭CH-84.17.53.160-0705
+      - 🇸🇪SE-121.127.46.147-0733
+      - 🇺🇸US-194.116.173.21-7900
+      - 🇧🇬BG-213.183.63.69-7226
+      - 🇸🇬SG-139.162.5.19-0755
+      - 🇫🇷FR-62.210.88.167-0753
+      - 🇬🇧GB-77.72.5.150-0660
+      - 🇫🇷FR-51.158.195.96-2056
+      - 🇮🇲IM-192.71.211.161-7628
+      - 🇫🇮FI-37.143.129.230-6409
+      - 🇫🇷FR-51.158.195.96-1970
+      - 🇲🇽MX-190.103.179.23-6373
+      - 🇹🇷TR-45.89.52.66-7832
+      - 🇹🇷TR-45.89.52.66-7830
+      - 🇹🇷TR-45.89.52.66-7834
+      - 🇹🇷TR-45.89.52.66-7833
+      - 🇹🇷TR-45.89.52.66-7831
+      - 🇫🇷FR-57.128.32.76-7371
+      - 🇮🇲IM-37.235.55.21-13038
+      - 🇭🇷HR-46.183.184.60-7618
+      - 🇩🇰DK-192.36.27.116-7299
+      - 🇧🇪BE-192.71.249.71-7225
+      - 🇵🇱PL-217.30.10.68-13121
+      - 🇭🇷HR-46.183.184.61-7619
+      - 🇵🇱PL-217.30.10.68-7729
+      - 🇵🇱PL-217.30.10.68-13127
+      - 🇵🇱PL-217.30.10.68-7730
+      - 🇬🇷GR-192.71.166.102-6010
+      - 🇵🇱PL-217.30.10.68-13129
+      - 🇵🇱PL-217.30.10.68-13124
+      - 🇵🇱PL-217.30.10.68-13136
+      - 🇵🇱PL-217.30.10.68-13122
+      - 🇵🇱PL-217.30.10.68-13118
+      - 🇦🇲AM-146.185.248.22-7220
+      - 🇵🇱PL-217.30.10.68-13119
+      - 🇵🇱PL-217.30.10.68-13132
+      - 🇵🇱PL-217.30.10.68-13128
+      - 🇵🇱PL-217.30.10.68-13123
+      - 🇪🇸ES-5.188.181.201-12951
+      - 🇪🇸ES-5.188.181.201-12954
+      - 🔒 SS-TCP-NA 🇧🇬 BG-38.54.27.148:989 📡 PING-175.88-MS
+      - 🔒 TR-GRPC-TLS 🏴‍☠️ NA-104.25.255.254:443 📡 PING-002.19-MS
+      - 🔒 TR-GRPC-TLS 🇳🇱 NL-188.114.99.29:443 📡 PING-001.79-MS
+      - 🔒 TR-WS-TLS 🏴‍☠️ NA-104.21.73.195:443 📡 PING-002.07-MS
+      - 🇺🇸 United States of America 3
+      - 🇺🇸 United States of America 177
+      - 🇺🇸 United States of America 145
+      - 🇺🇸 United States of America 155
+      - 🇺🇸 United States of America 68
+      - 🔒 TR-WS-TLS 🏴‍☠️ NA-104.19.145.205:443 📡 PING-001.38-MS
+      - 🇺🇸 United States of America 115
+      - 🇺🇸 United States of America 126
+      - 🇺🇸 United States of America 44
+      - 🇺🇸 United States of America 147
+      - 🇺🇸 United States of America 111
+      - 🇺🇸 United States of America 167
+      - 🇺🇸 United States of America 180
+      - 🇺🇸 United States of America 193
+      - 🇺🇸 United States of America 181
+      - 🇺🇸 United States of America 14
+      - 🇺🇸 United States of America 32
+      - 🇺🇸 United States of America 43
+      - 🇺🇸 United States of America 182
+      - 🇺🇸 United States of America 170
+      - 🇺🇸 United States of America 82
+      - 🇺🇸 United States of America 113
+      - 🇺🇸 United States of America 148
+      - 🇺🇸 United States of America 118
+      - 🇺🇸 United States of America 85
+      - 🇮🇱 اسرائیل _1
+      - '🇸🇪 سوئد '
+      - 🇷🇸 صربستان _2
+      - 🇳🇴 نروژ _2
+      - 🇩🇰 دانمارک ۱_2
+      - '🇫🇮 فنلاند '
+      - '🇭🇷 کرواسی '
+      - '🇲🇽 مکزیک '
+      - '🇲🇰 مقدونیه '
+      - بلژیک 🇧🇪 ۱
+      - 🇷🇴 رومانی _2
+      - لندن 🇬🇧 ۲_3
+      - اکوادور 🇪🇨_2
+      - جزیره من 🇮🇲
+      - امریکا 🇺🇲_2
+      - کنیا 🇰🇪_2
+      - 🇬🇧 لندن ۱
+      - فرانسه 🇨🇵 ۲_5
+      - فرانسه 🇨🇵 ۱_3
+      - سوئیس 🇨🇭_3
+      - اوکراین 🇺🇦_2
+      - 🇧🇪 بلژیک ۲
+      - 🇩🇰 دانمارک ۲
+      - 🇮🇱 اسرائیل _2
+      - 🇮🇸 ایسلند ۱_2
+      - 🇮🇸 ایسلند ۲_2
+      - ارمنستان 🇦🇲
+      - آلمان 🇩🇪_3
+      - '🇦🇹 اتریش '
+      - '🇧🇬 بلغارستان '
+  - name: توزیع بار (هش سازگار) ♻️
+    type: load-balance
+    url: https://api.v2fly.org/checkConnection.svgz
+    interval: 600
+    tolerance: 180
+    proxies:
+      - فرانسه 🇨🇵 ۲_1
+      - هلند 🇳🇱 ۲_1
+      - آلمان 🇩🇪 ۲
+      - هلند 🇳🇱 ⚡
+      - هلند 🇳🇱 ۴_1
+      - هلند 🇳🇱 ۳_1
+      - فرانسه 🇨🇵 ⚡
+      - لندن 🇬🇧 ۲_1
+      - 🇺🇸 تگزاس _1
+      - 🇺🇸 آریزونا _1
+      - لندن 🇬🇧_1
+      - '🇮🇷 ایران '
+      - فرانسه 🇨🇵 ۴_1
+      - 🇸🇬 سنگاپور _1
+      - هلند 🇳🇱 ۱_1
+      - فرانسه 🇨🇵 ۱_1
+      - فرانسه 🇨🇵 ۳_1
+      - آلمان 🇩🇪 ۳
+      - لندن 🇬🇧 ۱
+      - فرانسه 🇨🇵 ۵_1
+      - هلند 🇳🇱 ۶
+      - فرانسه 🇨🇵 ۶
+      - فرانسه 🇨🇵 ۸
+      - آمریکا 🇺🇸
+      - '⚡🇺🇸 نیوجرسی '
+      - فرانسه 🇨🇵 ۱۰
+      - هلند 🇳🇱🔒
+      - سوئیس 🇨🇭_1
+      - '🇬🇧 لندن '
+      - هلند 🇳🇱 ۲_2
+      - '🇺🇸 نیویورک '
+      - 🇸🇬 سنگاپور _2
+      - فرانسه 🇨🇵 ۳_2
+      - 'فرانسه 🇨🇵 '
+      - آلمان 🇩🇪 ۱
+      - 🇺🇸 آریزونا _2
+      - فرانسه 🇨🇵 ۲_2
+      - هلند 🇳🇱 ۱_2
+      - 🇺🇸 تگزاس _2
+      - فرانسه 🇨🇵 ۴_2
+      - 'آلمان 🇩🇪 '
+      - هلند 🇳🇱 ۴_2
+      - هلند 🇳🇱 ۳_2
+      - ' هلند 🇳🇱 ۵'
+      - فرانسه 🇨🇵 ۷
+      - فرانسه 🇨🇵 ۵_2
+      - فرانسه 🇨🇵 ۲_3
+      - فرانسه 🇨🇵 ۳_3
+      - هلند 🇳🇱 ۳_3
+      - هلند 🇳🇱 ۱_3
+      - 🇳🇱 3
+      - 🇳🇴 نروژ _1
+      - 🇸🇪 2
+      - 🇸🇪 3
+      - 🇸🇪 4
+      - 🇫🇷16
+      - فرانسه 🇨🇵 ۲_4
+      - 🇫🇷51.158.37.251
+      - 🇫🇷51.158.61.69
+      - 🇫🇷51.159.104.104
+      - 🇫🇷62.210.88.169
+      - 🇫🇷62.210.88.139
+      - 🇫🇷62.210.88.157
+      - 🇫🇷51.159.221.203
+      - 🇫🇷51.159.222.38
+      - 🇫🇷51.159.222.32
+      - 🇫🇷51.159.222.34
+      - 🇫🇷51.159.222.33
+      - 🇫🇷51.159.222.29
+      - 🇫🇷51.159.222.22
+      - 🇫🇷51.159.222.19
+      - 🇫🇷62.210.88.155
+      - 🇫🇷51.159.221.229
+      - 🇫🇷51.159.221.231
+      - 🇫🇷51.159.221.228
+      - 🇫🇷51.159.221.230
+      - 🇫🇷51.159.221.224
+      - 🇫🇷51.159.221.227
+      - 🇫🇷51.159.221.225
+      - 🇫🇷51.159.221.219
+      - 🇫🇷51
+      - 🇫🇷51.158.54.241
+      - 🇫🇷51.158.54.246
+      - 🇫🇷51.158.54.239
+      - 🇫🇷51.159.107.252
+      - 🇫🇷51.158.54.237
+      - 🇫🇷51.158.54.234
+      - 🇫🇷51.158.54.238
+      - 🇫🇷51.158.54.230
+      - 🇫🇷51.158.54.228
+      - 🇫🇷51.158.54.214
+      - 🇫🇷51.158.54.209
+      - 🇫🇷51.158.54.208
+      - 🇫🇷51.158.54.207
+      - 🇫🇷51.159.211.49
+      - 🇫🇷51.159.210.173
+      - 🇫🇷51.158.61.122
+      - 🇫🇷51.158.61.155
+      - 🇫🇷37.59.21.129
+      - 🇫🇷51.159.222.35
+      - 🇩🇪5
+      - 🇬🇧198.244.231.26
+      - 🇳🇱51.158.195.96
+      - 🇳🇱51.158.200.145
+      - 🇳🇱51.158.202.195
+      - 🇳🇱51.158.202.189
+      - 🇳🇱51.158.202.186
+      - 🇳🇱51.158.202.175
+      - 🇳🇱51.158.200.159
+      - 🇳🇱51.158.204.59
+      - 🇳🇱51.158.204.62
+      - 🇳🇱51.158.204.68
+      - 🇳🇱51.158.204.25
+      - 🇳🇱51
+      - 🇳🇱51.158.203.3
+      - 🇳🇱51.158.202.254
+      - 🇳🇱51.158.202.252
+      - 🇳🇱51.158.200.166
+      - 🇳🇱51.158.202.251
+      - 🇳🇱51.158.200.141
+      - 🇳🇱19
+      - فرانسه 🇨🇵 🕳️
+      - 🇳🇱51.
+      - 🇵🇱146.59.111.195
+      - '🚀 🇵🇱 لهستان '
+      - 🇯🇵 6
+      - 🇯🇵 5
+      - 🇯🇵 4
+      - 🇯🇵 3
+      - 🇺🇸 1
+      - 🇫🇷57.128.32.81
+      - 🇫🇷162.19.59.165
+      - 🇫🇷162.19.59.164
+      - 🇫🇷162.19.59.162
+      - 🇫🇷62.210.88.167
+      - 🇫🇷51.159.210.114
+      - 🇫🇷62.210.88.164
+      - فرانسه 🇨🇵 ۱_2
+      - 🇳🇱51.158.204.33
+      - 🇳🇱51.158.200.95
+      - 🇰🇷KR(AzadNet.t.me)_001
+      - 🇳🇱NL-51.158.202.190-0762 | 28.85MB
+      - 🇫🇷62.210.88.168
+      - 🇫🇷62.210.88.148
+      - 🇳🇱51.158.203.2
+      - 🇳🇱51.158.204.82
+      - 🇸🇪 1
+      - 🇩🇰 دانمارک ۱_1
+      - 'بلژیک 🇧🇪 '
+      - 🇷🇴 رومانی _1
+      - اکوادور 🇪🇨_1
+      - امریکا 🇺🇲_1
+      - کنیا 🇰🇪_1
+      - '🇬🇷 یونان '
+      - 🇮🇸 ایسلند ۲_1
+      - 🇵🇷 پورتوریکو
+      - 🇮🇸 ایسلند ۱_1
+      - لندن 🇬🇧 ۲_2
+      - اوکراین 🇺🇦_1
+      - '🇫🇷 فرانسه ۲ '
+      - 🇦🇺AU(AzadNet.t.me)_001
+      - 🇦🇺AU(AzadNet.t.me)_002
+      - 🇨🇦CA(AzadNet.t.me)_001
+      - 🇩🇪DE(AzadNet.t.me)_005
+      - 🇫🇷FR(AzadNet.t.me)_002
+      - لندن 🇬🇧 🚀
+      - 🇷🇸 صربستان _1
+      - 🇺🇸US(AzadNet.t.me)_052
+      - 🇺🇸US(AzadNet.t.me)_053
+      - 🇺🇸US(AzadNet.t.me)_054
+      - 🇿🇦ZA(AzadNet.t.me)_001
+      - اسپانیا 🇪🇦
+      - 'فرانسه 🇨🇵 تروجان '
+      - ایتالیا 🇮🇹
+      - سوئیس 🇨🇭_2
+      - لندن 🇬🇧_2
+      - آلمان 🇩🇪_1
+      - کانادا 🇨🇦
+      - سوئد 🇸🇪
+      - سنگاپور 🇸🇬
+      - آلمان 🇩🇪_2
+      - 🇫🇷57.128.32.145
+      - 🇫🇷51.158.37.46
+      - 🇫🇷51.159.222.39
+      - 🇫🇷51.158.54.240
+      - 🇫🇷51.158.54.229
+      - 🇫🇷51.158.54.210
+      - 🇫🇷51.158.54.211
+      - 🇩🇪57.129.1.18
+      - 🇩🇪162.19.170.209
+      - 🇳🇱51.158.202.193
+      - 🇳🇱51.158.202.192
+      - 🇳🇱51.158.202.185
+      - 🇳🇱51.158.200.158
+      - 🇳🇱51.158.204.70
+      - 🇳🇱51.158.203.5
+      - 🇫🇷162.19.204.82
+      - 🇫🇷162.19.83.14
+      - 🇫🇷62.210.88.156
+      - 🇫🇷162.19.83.9
+      - 🇫🇷51.158.37.62
+      - 🇫🇷51.158.54.232
+      - 🇩🇪141.95.125.11
+      - 🇩🇪141.95.125.48
+      - 🇳🇱51.158.203.6
+      - 🇯🇵JP-152.69.200.60-0127
+      - 🇮🇷IR-185.126.1.155-3153
+      - 🇮🇷IR-185.126.1.155-3170
+      - 🇨🇦CA-154.12.39.113-1351
+      - 🇨🇦CA-154.12.39.152-1359
+      - 🇺🇸US-47.89.211.175-12960
+      - 🇺🇸US-47.88.87.39-12967
+      - 🇺🇸US-212.102.47.198-0609
+      - 🇫🇷FR-195.154.185.174-0676
+      - 🇫🇷FR-195.154.169.198-0672
+      - 🇦🇺AU-172.105.191.145-0688
+      - 🇦🇹AT-185.180.12.81-0706
+      - 🇨🇭CH-84.17.53.160-0705
+      - 🇸🇪SE-121.127.46.147-0733
+      - 🇺🇸US-194.116.173.21-7900
+      - 🇧🇬BG-213.183.63.69-7226
+      - 🇸🇬SG-139.162.5.19-0755
+      - 🇫🇷FR-62.210.88.167-0753
+      - 🇬🇧GB-77.72.5.150-0660
+      - 🇫🇷FR-51.158.195.96-2056
+      - 🇮🇲IM-192.71.211.161-7628
+      - 🇫🇮FI-37.143.129.230-6409
+      - 🇫🇷FR-51.158.195.96-1970
+      - 🇲🇽MX-190.103.179.23-6373
+      - 🇹🇷TR-45.89.52.66-7832
+      - 🇹🇷TR-45.89.52.66-7830
+      - 🇹🇷TR-45.89.52.66-7834
+      - 🇹🇷TR-45.89.52.66-7833
+      - 🇹🇷TR-45.89.52.66-7831
+      - 🇫🇷FR-57.128.32.76-7371
+      - 🇮🇲IM-37.235.55.21-13038
+      - 🇭🇷HR-46.183.184.60-7618
+      - 🇩🇰DK-192.36.27.116-7299
+      - 🇧🇪BE-192.71.249.71-7225
+      - 🇵🇱PL-217.30.10.68-13121
+      - 🇭🇷HR-46.183.184.61-7619
+      - 🇵🇱PL-217.30.10.68-7729
+      - 🇵🇱PL-217.30.10.68-13127
+      - 🇵🇱PL-217.30.10.68-7730
+      - 🇬🇷GR-192.71.166.102-6010
+      - 🇵🇱PL-217.30.10.68-13129
+      - 🇵🇱PL-217.30.10.68-13124
+      - 🇵🇱PL-217.30.10.68-13136
+      - 🇵🇱PL-217.30.10.68-13122
+      - 🇵🇱PL-217.30.10.68-13118
+      - 🇦🇲AM-146.185.248.22-7220
+      - 🇵🇱PL-217.30.10.68-13119
+      - 🇵🇱PL-217.30.10.68-13132
+      - 🇵🇱PL-217.30.10.68-13128
+      - 🇵🇱PL-217.30.10.68-13123
+      - 🇪🇸ES-5.188.181.201-12951
+      - 🇪🇸ES-5.188.181.201-12954
+      - 🔒 SS-TCP-NA 🇧🇬 BG-38.54.27.148:989 📡 PING-175.88-MS
+      - 🔒 TR-GRPC-TLS 🏴‍☠️ NA-104.25.255.254:443 📡 PING-002.19-MS
+      - 🔒 TR-GRPC-TLS 🇳🇱 NL-188.114.99.29:443 📡 PING-001.79-MS
+      - 🔒 TR-WS-TLS 🏴‍☠️ NA-104.21.73.195:443 📡 PING-002.07-MS
+      - 🇺🇸 United States of America 3
+      - 🇺🇸 United States of America 177
+      - 🇺🇸 United States of America 145
+      - 🇺🇸 United States of America 155
+      - 🇺🇸 United States of America 68
+      - 🔒 TR-WS-TLS 🏴‍☠️ NA-104.19.145.205:443 📡 PING-001.38-MS
+      - 🇺🇸 United States of America 115
+      - 🇺🇸 United States of America 126
+      - 🇺🇸 United States of America 44
+      - 🇺🇸 United States of America 147
+      - 🇺🇸 United States of America 111
+      - 🇺🇸 United States of America 167
+      - 🇺🇸 United States of America 180
+      - 🇺🇸 United States of America 193
+      - 🇺🇸 United States of America 181
+      - 🇺🇸 United States of America 14
+      - 🇺🇸 United States of America 32
+      - 🇺🇸 United States of America 43
+      - 🇺🇸 United States of America 182
+      - 🇺🇸 United States of America 170
+      - 🇺🇸 United States of America 82
+      - 🇺🇸 United States of America 113
+      - 🇺🇸 United States of America 148
+      - 🇺🇸 United States of America 118
+      - 🇺🇸 United States of America 85
+      - 🇮🇱 اسرائیل _1
+      - '🇸🇪 سوئد '
+      - 🇷🇸 صربستان _2
+      - 🇳🇴 نروژ _2
+      - 🇩🇰 دانمارک ۱_2
+      - '🇫🇮 فنلاند '
+      - '🇭🇷 کرواسی '
+      - '🇲🇽 مکزیک '
+      - '🇲🇰 مقدونیه '
+      - بلژیک 🇧🇪 ۱
+      - 🇷🇴 رومانی _2
+      - لندن 🇬🇧 ۲_3
+      - اکوادور 🇪🇨_2
+      - جزیره من 🇮🇲
+      - امریکا 🇺🇲_2
+      - کنیا 🇰🇪_2
+      - 🇬🇧 لندن ۱
+      - فرانسه 🇨🇵 ۲_5
+      - فرانسه 🇨🇵 ۱_3
+      - سوئیس 🇨🇭_3
+      - اوکراین 🇺🇦_2
+      - 🇧🇪 بلژیک ۲
+      - 🇩🇰 دانمارک ۲
+      - 🇮🇱 اسرائیل _2
+      - 🇮🇸 ایسلند ۱_2
+      - 🇮🇸 ایسلند ۲_2
+      - ارمنستان 🇦🇲
+      - آلمان 🇩🇪_3
+      - '🇦🇹 اتریش '
+      - '🇧🇬 بلغارستان '
+    strategy: consistent-hashing
+  - name: توزیع بار (یکنواخت) ⏳
+    type: load-balance
+    url: https://api.v2fly.org/checkConnection.svgz
+    interval: 600
+    tolerance: 180
+    proxies:
+      - فرانسه 🇨🇵 ۲_1
+      - هلند 🇳🇱 ۲_1
+      - آلمان 🇩🇪 ۲
+      - هلند 🇳🇱 ⚡
+      - هلند 🇳🇱 ۴_1
+      - هلند 🇳🇱 ۳_1
+      - فرانسه 🇨🇵 ⚡
+      - لندن 🇬🇧 ۲_1
+      - 🇺🇸 تگزاس _1
+      - 🇺🇸 آریزونا _1
+      - لندن 🇬🇧_1
+      - '🇮🇷 ایران '
+      - فرانسه 🇨🇵 ۴_1
+      - 🇸🇬 سنگاپور _1
+      - هلند 🇳🇱 ۱_1
+      - فرانسه 🇨🇵 ۱_1
+      - فرانسه 🇨🇵 ۳_1
+      - آلمان 🇩🇪 ۳
+      - لندن 🇬🇧 ۱
+      - فرانسه 🇨🇵 ۵_1
+      - هلند 🇳🇱 ۶
+      - فرانسه 🇨🇵 ۶
+      - فرانسه 🇨🇵 ۸
+      - آمریکا 🇺🇸
+      - '⚡🇺🇸 نیوجرسی '
+      - فرانسه 🇨🇵 ۱۰
+      - هلند 🇳🇱🔒
+      - سوئیس 🇨🇭_1
+      - '🇬🇧 لندن '
+      - هلند 🇳🇱 ۲_2
+      - '🇺🇸 نیویورک '
+      - 🇸🇬 سنگاپور _2
+      - فرانسه 🇨🇵 ۳_2
+      - 'فرانسه 🇨🇵 '
+      - آلمان 🇩🇪 ۱
+      - 🇺🇸 آریزونا _2
+      - فرانسه 🇨🇵 ۲_2
+      - هلند 🇳🇱 ۱_2
+      - 🇺🇸 تگزاس _2
+      - فرانسه 🇨🇵 ۴_2
+      - 'آلمان 🇩🇪 '
+      - هلند 🇳🇱 ۴_2
+      - هلند 🇳🇱 ۳_2
+      - ' هلند 🇳🇱 ۵'
+      - فرانسه 🇨🇵 ۷
+      - فرانسه 🇨🇵 ۵_2
+      - فرانسه 🇨🇵 ۲_3
+      - فرانسه 🇨🇵 ۳_3
+      - هلند 🇳🇱 ۳_3
+      - هلند 🇳🇱 ۱_3
+      - 🇳🇱 3
+      - 🇳🇴 نروژ _1
+      - 🇸🇪 2
+      - 🇸🇪 3
+      - 🇸🇪 4
+      - 🇫🇷16
+      - فرانسه 🇨🇵 ۲_4
+      - 🇫🇷51.158.37.251
+      - 🇫🇷51.158.61.69
+      - 🇫🇷51.159.104.104
+      - 🇫🇷62.210.88.169
+      - 🇫🇷62.210.88.139
+      - 🇫🇷62.210.88.157
+      - 🇫🇷51.159.221.203
+      - 🇫🇷51.159.222.38
+      - 🇫🇷51.159.222.32
+      - 🇫🇷51.159.222.34
+      - 🇫🇷51.159.222.33
+      - 🇫🇷51.159.222.29
+      - 🇫🇷51.159.222.22
+      - 🇫🇷51.159.222.19
+      - 🇫🇷62.210.88.155
+      - 🇫🇷51.159.221.229
+      - 🇫🇷51.159.221.231
+      - 🇫🇷51.159.221.228
+      - 🇫🇷51.159.221.230
+      - 🇫🇷51.159.221.224
+      - 🇫🇷51.159.221.227
+      - 🇫🇷51.159.221.225
+      - 🇫🇷51.159.221.219
+      - 🇫🇷51
+      - 🇫🇷51.158.54.241
+      - 🇫🇷51.158.54.246
+      - 🇫🇷51.158.54.239
+      - 🇫🇷51.159.107.252
+      - 🇫🇷51.158.54.237
+      - 🇫🇷51.158.54.234
+      - 🇫🇷51.158.54.238
+      - 🇫🇷51.158.54.230
+      - 🇫🇷51.158.54.228
+      - 🇫🇷51.158.54.214
+      - 🇫🇷51.158.54.209
+      - 🇫🇷51.158.54.208
+      - 🇫🇷51.158.54.207
+      - 🇫🇷51.159.211.49
+      - 🇫🇷51.159.210.173
+      - 🇫🇷51.158.61.122
+      - 🇫🇷51.158.61.155
+      - 🇫🇷37.59.21.129
+      - 🇫🇷51.159.222.35
+      - 🇩🇪5
+      - 🇬🇧198.244.231.26
+      - 🇳🇱51.158.195.96
+      - 🇳🇱51.158.200.145
+      - 🇳🇱51.158.202.195
+      - 🇳🇱51.158.202.189
+      - 🇳🇱51.158.202.186
+      - 🇳🇱51.158.202.175
+      - 🇳🇱51.158.200.159
+      - 🇳🇱51.158.204.59
+      - 🇳🇱51.158.204.62
+      - 🇳🇱51.158.204.68
+      - 🇳🇱51.158.204.25
+      - 🇳🇱51
+      - 🇳🇱51.158.203.3
+      - 🇳🇱51.158.202.254
+      - 🇳🇱51.158.202.252
+      - 🇳🇱51.158.200.166
+      - 🇳🇱51.158.202.251
+      - 🇳🇱51.158.200.141
+      - 🇳🇱19
+      - فرانسه 🇨🇵 🕳️
+      - 🇳🇱51.
+      - 🇵🇱146.59.111.195
+      - '🚀 🇵🇱 لهستان '
+      - 🇯🇵 6
+      - 🇯🇵 5
+      - 🇯🇵 4
+      - 🇯🇵 3
+      - 🇺🇸 1
+      - 🇫🇷57.128.32.81
+      - 🇫🇷162.19.59.165
+      - 🇫🇷162.19.59.164
+      - 🇫🇷162.19.59.162
+      - 🇫🇷62.210.88.167
+      - 🇫🇷51.159.210.114
+      - 🇫🇷62.210.88.164
+      - فرانسه 🇨🇵 ۱_2
+      - 🇳🇱51.158.204.33
+      - 🇳🇱51.158.200.95
+      - 🇰🇷KR(AzadNet.t.me)_001
+      - 🇳🇱NL-51.158.202.190-0762 | 28.85MB
+      - 🇫🇷62.210.88.168
+      - 🇫🇷62.210.88.148
+      - 🇳🇱51.158.203.2
+      - 🇳🇱51.158.204.82
+      - 🇸🇪 1
+      - 🇩🇰 دانمارک ۱_1
+      - 'بلژیک 🇧🇪 '
+      - 🇷🇴 رومانی _1
+      - اکوادور 🇪🇨_1
+      - امریکا 🇺🇲_1
+      - کنیا 🇰🇪_1
+      - '🇬🇷 یونان '
+      - 🇮🇸 ایسلند ۲_1
+      - 🇵🇷 پورتوریکو
+      - 🇮🇸 ایسلند ۱_1
+      - لندن 🇬🇧 ۲_2
+      - اوکراین 🇺🇦_1
+      - '🇫🇷 فرانسه ۲ '
+      - 🇦🇺AU(AzadNet.t.me)_001
+      - 🇦🇺AU(AzadNet.t.me)_002
+      - 🇨🇦CA(AzadNet.t.me)_001
+      - 🇩🇪DE(AzadNet.t.me)_005
+      - 🇫🇷FR(AzadNet.t.me)_002
+      - لندن 🇬🇧 🚀
+      - 🇷🇸 صربستان _1
+      - 🇺🇸US(AzadNet.t.me)_052
+      - 🇺🇸US(AzadNet.t.me)_053
+      - 🇺🇸US(AzadNet.t.me)_054
+      - 🇿🇦ZA(AzadNet.t.me)_001
+      - اسپانیا 🇪🇦
+      - 'فرانسه 🇨🇵 تروجان '
+      - ایتالیا 🇮🇹
+      - سوئیس 🇨🇭_2
+      - لندن 🇬🇧_2
+      - آلمان 🇩🇪_1
+      - کانادا 🇨🇦
+      - سوئد 🇸🇪
+      - سنگاپور 🇸🇬
+      - آلمان 🇩🇪_2
+      - 🇫🇷57.128.32.145
+      - 🇫🇷51.158.37.46
+      - 🇫🇷51.159.222.39
+      - 🇫🇷51.158.54.240
+      - 🇫🇷51.158.54.229
+      - 🇫🇷51.158.54.210
+      - 🇫🇷51.158.54.211
+      - 🇩🇪57.129.1.18
+      - 🇩🇪162.19.170.209
+      - 🇳🇱51.158.202.193
+      - 🇳🇱51.158.202.192
+      - 🇳🇱51.158.202.185
+      - 🇳🇱51.158.200.158
+      - 🇳🇱51.158.204.70
+      - 🇳🇱51.158.203.5
+      - 🇫🇷162.19.204.82
+      - 🇫🇷162.19.83.14
+      - 🇫🇷62.210.88.156
+      - 🇫🇷162.19.83.9
+      - 🇫🇷51.158.37.62
+      - 🇫🇷51.158.54.232
+      - 🇩🇪141.95.125.11
+      - 🇩🇪141.95.125.48
+      - 🇳🇱51.158.203.6
+      - 🇯🇵JP-152.69.200.60-0127
+      - 🇮🇷IR-185.126.1.155-3153
+      - 🇮🇷IR-185.126.1.155-3170
+      - 🇨🇦CA-154.12.39.113-1351
+      - 🇨🇦CA-154.12.39.152-1359
+      - 🇺🇸US-47.89.211.175-12960
+      - 🇺🇸US-47.88.87.39-12967
+      - 🇺🇸US-212.102.47.198-0609
+      - 🇫🇷FR-195.154.185.174-0676
+      - 🇫🇷FR-195.154.169.198-0672
+      - 🇦🇺AU-172.105.191.145-0688
+      - 🇦🇹AT-185.180.12.81-0706
+      - 🇨🇭CH-84.17.53.160-0705
+      - 🇸🇪SE-121.127.46.147-0733
+      - 🇺🇸US-194.116.173.21-7900
+      - 🇧🇬BG-213.183.63.69-7226
+      - 🇸🇬SG-139.162.5.19-0755
+      - 🇫🇷FR-62.210.88.167-0753
+      - 🇬🇧GB-77.72.5.150-0660
+      - 🇫🇷FR-51.158.195.96-2056
+      - 🇮🇲IM-192.71.211.161-7628
+      - 🇫🇮FI-37.143.129.230-6409
+      - 🇫🇷FR-51.158.195.96-1970
+      - 🇲🇽MX-190.103.179.23-6373
+      - 🇹🇷TR-45.89.52.66-7832
+      - 🇹🇷TR-45.89.52.66-7830
+      - 🇹🇷TR-45.89.52.66-7834
+      - 🇹🇷TR-45.89.52.66-7833
+      - 🇹🇷TR-45.89.52.66-7831
+      - 🇫🇷FR-57.128.32.76-7371
+      - 🇮🇲IM-37.235.55.21-13038
+      - 🇭🇷HR-46.183.184.60-7618
+      - 🇩🇰DK-192.36.27.116-7299
+      - 🇧🇪BE-192.71.249.71-7225
+      - 🇵🇱PL-217.30.10.68-13121
+      - 🇭🇷HR-46.183.184.61-7619
+      - 🇵🇱PL-217.30.10.68-7729
+      - 🇵🇱PL-217.30.10.68-13127
+      - 🇵🇱PL-217.30.10.68-7730
+      - 🇬🇷GR-192.71.166.102-6010
+      - 🇵🇱PL-217.30.10.68-13129
+      - 🇵🇱PL-217.30.10.68-13124
+      - 🇵🇱PL-217.30.10.68-13136
+      - 🇵🇱PL-217.30.10.68-13122
+      - 🇵🇱PL-217.30.10.68-13118
+      - 🇦🇲AM-146.185.248.22-7220
+      - 🇵🇱PL-217.30.10.68-13119
+      - 🇵🇱PL-217.30.10.68-13132
+      - 🇵🇱PL-217.30.10.68-13128
+      - 🇵🇱PL-217.30.10.68-13123
+      - 🇪🇸ES-5.188.181.201-12951
+      - 🇪🇸ES-5.188.181.201-12954
+      - 🔒 SS-TCP-NA 🇧🇬 BG-38.54.27.148:989 📡 PING-175.88-MS
+      - 🔒 TR-GRPC-TLS 🏴‍☠️ NA-104.25.255.254:443 📡 PING-002.19-MS
+      - 🔒 TR-GRPC-TLS 🇳🇱 NL-188.114.99.29:443 📡 PING-001.79-MS
+      - 🔒 TR-WS-TLS 🏴‍☠️ NA-104.21.73.195:443 📡 PING-002.07-MS
+      - 🇺🇸 United States of America 3
+      - 🇺🇸 United States of America 177
+      - 🇺🇸 United States of America 145
+      - 🇺🇸 United States of America 155
+      - 🇺🇸 United States of America 68
+      - 🔒 TR-WS-TLS 🏴‍☠️ NA-104.19.145.205:443 📡 PING-001.38-MS
+      - 🇺🇸 United States of America 115
+      - 🇺🇸 United States of America 126
+      - 🇺🇸 United States of America 44
+      - 🇺🇸 United States of America 147
+      - 🇺🇸 United States of America 111
+      - 🇺🇸 United States of America 167
+      - 🇺🇸 United States of America 180
+      - 🇺🇸 United States of America 193
+      - 🇺🇸 United States of America 181
+      - 🇺🇸 United States of America 14
+      - 🇺🇸 United States of America 32
+      - 🇺🇸 United States of America 43
+      - 🇺🇸 United States of America 182
+      - 🇺🇸 United States of America 170
+      - 🇺🇸 United States of America 82
+      - 🇺🇸 United States of America 113
+      - 🇺🇸 United States of America 148
+      - 🇺🇸 United States of America 118
+      - 🇺🇸 United States of America 85
+      - 🇮🇱 اسرائیل _1
+      - '🇸🇪 سوئد '
+      - 🇷🇸 صربستان _2
+      - 🇳🇴 نروژ _2
+      - 🇩🇰 دانمارک ۱_2
+      - '🇫🇮 فنلاند '
+      - '🇭🇷 کرواسی '
+      - '🇲🇽 مکزیک '
+      - '🇲🇰 مقدونیه '
+      - بلژیک 🇧🇪 ۱
+      - 🇷🇴 رومانی _2
+      - لندن 🇬🇧 ۲_3
+      - اکوادور 🇪🇨_2
+      - جزیره من 🇮🇲
+      - امریکا 🇺🇲_2
+      - کنیا 🇰🇪_2
+      - 🇬🇧 لندن ۱
+      - فرانسه 🇨🇵 ۲_5
+      - فرانسه 🇨🇵 ۱_3
+      - سوئیس 🇨🇭_3
+      - اوکراین 🇺🇦_2
+      - 🇧🇪 بلژیک ۲
+      - 🇩🇰 دانمارک ۲
+      - 🇮🇱 اسرائیل _2
+      - 🇮🇸 ایسلند ۱_2
+      - 🇮🇸 ایسلند ۲_2
+      - ارمنستان 🇦🇲
+      - آلمان 🇩🇪_3
+      - '🇦🇹 اتریش '
+      - '🇧🇬 بلغارستان '
+    strategy: round-robin
+  - name: 🇮🇷 سایتای ایرانی
+    type: select
+    proxies:
+      - 🛡️ بدون فیلترشکن
+      - 🚫 اجازه ندادن
+      - 📶 انتخاب نوع اتصال
+  - name: 🏴‍☠️ سایتای تحریمی
+    type: select
+    proxies:
+      - 🔀 نوع انتخاب پروکسی
+      - 🛡️ بدون فیلترشکن
+      - 🚫 اجازه ندادن
+  - name: 🤬 سایتای سانسوری
+    type: select
+    proxies:
+      - 🚫 اجازه ندادن
+      - 🔀 نوع انتخاب پروکسی
+      - 🛡️ بدون فیلترشکن
+  - name: 🆎 تبلیغات
+    type: select
+    proxies:
+      - 🚫 اجازه ندادن
+      - 🛡️ بدون فیلترشکن
+      - 📶 انتخاب نوع اتصال
+  - name: 🍃 تصفیه برنامه
+    type: select
+    proxies:
+      - 🚫 اجازه ندادن
+      - 🛡️ بدون فیلترشکن
+      - 📶 انتخاب نوع اتصال
+  - name: 🛑 رهگیری جهانی
+    type: select
+    proxies:
+      - 🚫 اجازه ندادن
+      - 🛡️ بدون فیلترشکن
+      - 📶 انتخاب نوع اتصال
+  - name: 🎮 استیم
+    type: select
+    proxies:
+      - 🛡️ بدون فیلترشکن
+      - 🚫 اجازه ندادن
+      - 📶 انتخاب نوع اتصال
+  - name: 🛡️ بدون فیلترشکن
+    type: select
+    proxies:
+      - DIRECT
+  - name: ⛔ قطع اینترنت
+    type: select
+    proxies:
+      - REJECT
+  - name: 🚫 اجازه ندادن
+    type: select
+    proxies:
+      - REJECT
+  - name: 🔐 فقط سایتای فیلتر شده
+    type: select
+    proxies:
+      - DIRECT
+  - name: 🌐 همه سایتا
+    type: select
+    proxies:
+      - 🔀 نوع انتخاب پروکسی
+
+rule-providers:
+  blocked:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/coldwater-10/clash_rules/main/blocked-sites.yml
+    interval: 432000
+    path: ./ruleset/blocked.yaml
+  category_porn:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/Kr328/V2rayDomains2Clash/generated/category-porn.yaml
+    interval: 432000
+    path: ./ruleset/category_porn.yaml
+  facebook:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/Kr328/V2rayDomains2Clash/generated/facebook.yaml
+    interval: 432000
+    path: ./ruleset/facebook.yaml
+  youtube:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/Kr328/V2rayDomains2Clash/generated/youtube.yaml
+    interval: 432000
+    path: ./ruleset/youtube.yaml
+  instagram:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/Kr328/V2rayDomains2Clash/generated/instagram.yaml
+    interval: 432000
+    path: ./ruleset/instagram.yaml
+  spotify:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/Kr328/V2rayDomains2Clash/generated/spotify.yaml
+    interval: 432000
+    path: ./ruleset/spotify.yaml
+  twitter:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/Kr328/V2rayDomains2Clash/generated/twitter.yaml
+    interval: 432000
+    path: ./ruleset/twitter.yaml
+  telegram:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/Kr328/V2rayDomains2Clash/generated/telegram.yaml
+    interval: 432000
+    path: ./ruleset/telegram.yaml
+  openai:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/Kr328/V2rayDomains2Clash/generated/openai.yaml
+    interval: 432000
+    path: ./ruleset/openai.yaml
+  whatsapp:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/Kr328/V2rayDomains2Clash/generated/whatsapp.yaml
+    interval: 432000
+    path: ./ruleset/whatsapp.yaml
+  tiktok:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/Kr328/V2rayDomains2Clash/generated/tiktok.yaml
+    interval: 432000
+    path: ./ruleset/tiktok.yaml
+  twitch:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/Kr328/V2rayDomains2Clash/generated/twitch.yaml
+    interval: 432000
+    path: ./ruleset/twitch.yaml
+  censor:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/coldwater-10/clash_rules/main/censor.yaml
+    interval: 432000
+    path: ./ruleset/tahrim.yaml
+  local_ips:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/Kr328/V2rayDomains2Clash/generated/local-ips.yaml
+    interval: 432000
+    path: ./ruleset/local_ips.yaml
+  private:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/Kr328/V2rayDomains2Clash/generated/private.yaml
+    interval: 432000
+    path: ./ruleset/private.yaml
+  category_ir:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/Kr328/V2rayDomains2Clash/generated/category-ir.yaml
+    interval: 432000
+    path: ./ruleset/category_ir.yaml
+  iran:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/coldwater-10/clash_rules/main/iran.yaml
+    interval: 432000
+    path: ./ruleset/iran.yaml
+  iran_other:
+    type: http
+    behavior: domain
+    url: https://github.com/bootmortis/iran-hosted-domains/releases/latest/download/clash_rules_other.yaml
+    interval: 432000
+    path: ./ruleset/iran_other.yaml
+  steam:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/coldwater-10/clash_rules/main/steam.yaml
+    interval: 432000
+    path: ./ruleset/steam.yaml
+  Purification_ip:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/coldwater-10/clash_rules/main/Purification%20app%20ip.yaml
+    interval: 432000
+    path: ./ruleset/Purificationip.yaml
+  Purification:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/coldwater-10/clash_rules/main/Purification%20app.yaml
+    interval: 432000
+    path: ./ruleset/Purification.yaml
+  category_public_tracker:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/Kr328/V2rayDomains2Clash/generated/category-public-tracker.yaml
+    interval: 432000
+    path: ./ruleset/category_public_tracker.yaml
+  Global:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/coldwater-10/clash_rules/main/Global%20tracking.yaml
+    interval: 432000
+    path: ./ruleset/Global.yaml
+  category_ads_all:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/Kr328/V2rayDomains2Clash/generated/category-ads-all.yaml
+    interval: 432000
+    path: ./ruleset/category_ads_all.yaml
+  iran_ads:
+    type: http
+    behavior: domain
+    url: https://github.com/bootmortis/iran-hosted-domains/releases/latest/download/clash_rules_ads.yaml
+    interval: 432000
+    path: ./ruleset/iran_ads.yaml
+  ads_ip:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/coldwater-10/clash_rules/main/ads%20ip.yaml
+    interval: 432000
+    path: ./ruleset/adsip.yaml
+  add:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/coldwater-10/clash_rules/main/add.yaml
+    interval: 432000
+    path: ./ruleset/add.yaml
+  MoreAd:
+    type: http
+    behavior: domain
+    url: https://howdy.id/download/rules/clash.txt
+    interval: 86400
+    path: ./providers/rule-provider_clash.yaml
+  AntiAd:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-clash.yaml
+    interval: 432000
+    path: ./ruleset/AntiAd.yaml
+  GoodbyeAds:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/coldwater-10/clash_rules/main/GoodbyeAds.yaml
+    interval: 432000
+    path: ./ruleset/add.yaml
+  tahrim:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/coldwater-10/clash_rules/main/tahrim.yaml
+    interval: 432000
+    path: ./ruleset/tahrim.yaml
+rules:
+  - RULE-SET,blocked,🔀 نوع انتخاب پروکسی
+  - RULE-SET,category_porn,🔀 نوع انتخاب پروکسی
+  - RULE-SET,facebook,🔀 نوع انتخاب پروکسی
+  - RULE-SET,youtube,🔀 نوع انتخاب پروکسی
+  - RULE-SET,instagram,🔀 نوع انتخاب پروکسی
+  - RULE-SET,spotify,🔀 نوع انتخاب پروکسی
+  - RULE-SET,twitter,🔀 نوع انتخاب پروکسی
+  - RULE-SET,telegram,🔀 نوع انتخاب پروکسی
+  - RULE-SET,openai,🔀 نوع انتخاب پروکسی
+  - RULE-SET,whatsapp,🔀 نوع انتخاب پروکسی
+  - RULE-SET,tiktok,🔀 نوع انتخاب پروکسی
+  - RULE-SET,twitch,🔀 نوع انتخاب پروکسی
+  - RULE-SET,censor,🤬 سایتای سانسوری
+  - RULE-SET,local_ips,🛡️ بدون فیلترشکن
+  - RULE-SET,private,🛡️ بدون فیلترشکن
+  - RULE-SET,category_ir,🇮🇷 سایتای ایرانی
+  - RULE-SET,iran,🇮🇷 سایتای ایرانی
+  - RULE-SET,iran_other,🇮🇷 سایتای ایرانی
+  - RULE-SET,steam,🎮 استیم
+  - RULE-SET,Purification_ip,🍃 تصفیه برنامه
+  - RULE-SET,Purification,🍃 تصفیه برنامه
+  - RULE-SET,category_public_tracker,🛑 رهگیری جهانی
+  - RULE-SET,Global,🛑 رهگیری جهانی
+  - RULE-SET,category_ads_all,🆎 تبلیغات
+  - RULE-SET,iran_ads,🆎 تبلیغات
+  - RULE-SET,ads_ip,🆎 تبلیغات
+  - RULE-SET,add,🆎 تبلیغات
+  - RULE-SET,MoreAd,🆎 تبلیغات
+  - RULE-SET,AntiAd,🆎 تبلیغات
+  - RULE-SET,GoodbyeAds,🆎 تبلیغات
+  - RULE-SET,tahrim,🏴‍☠️ سایتای تحریمی
+# 长风网站，自动注入
+  - DOMAIN-SUFFIX,v2rayse.com,🔀 نوع انتخاب پروکسی
+  - DOMAIN-SUFFIX,cff.pw,🔀 نوع انتخاب پروکسی
+  - DOMAIN-SUFFIX,vpnse.org,🔀 نوع انتخاب پروکسی
+  - DOMAIN-SUFFIX,cfmem.com,🔀 نوع انتخاب پروکسی
+  - GEOIP,IR,🇮🇷 سایتای ایرانی
+  - MATCH,📶 انتخاب نوع اتصال
