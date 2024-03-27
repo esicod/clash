@@ -1,0 +1,1795 @@
+{
+  "log": {
+    "disabled": false,
+    "level": "info",
+    "timestamp": true
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "proxyDns",
+        "address": "8.8.8.8",
+        "detour": "select"
+      },
+      {
+        "tag": "localDns",
+        "address": "https://223.5.5.5/dns-query",
+        "detour": "direct"
+      },
+      {
+        "tag": "block",
+        "address": "rcode://success"
+      }
+    ],
+    "rules": [
+      {
+        "domain": [
+          "ghproxy.com",
+          "cdn.jsdelivr.net",
+          "testingcf.jsdelivr.net"
+        ],
+        "server": "localDns"
+      },
+      {
+        "geosite": [
+          "category-ads-all"
+        ],
+        "server": "block"
+      },
+      {
+        "server": "localDns",
+        "outbound": "any",
+        "disable_cache": true
+      },
+      {
+        "geosite": [
+          "cn"
+        ],
+        "server": "localDns"
+      },
+      {
+        "server": "localDns",
+        "clash_mode": "direct"
+      },
+      {
+        "server": "proxyDns",
+        "clash_mode": "global"
+      },
+      {
+        "geosite": [
+          "geolocation-!cn"
+        ],
+        "server": "proxyDns"
+      }
+    ],
+    "strategy": "ipv4_only"
+  },
+  "inbounds": [
+    {
+      "sniff": true,
+      "type": "mixed",
+      "listen": "127.0.0.1",
+      "listen_port": 1081
+    },
+    {
+      "stack": "system",
+      "auto_route": true,
+      "inet4_address": "172.19.0.1/30",
+      "mtu": 9000,
+      "sniff": true,
+      "strict_route": true,
+      "type": "tun",
+      "platform": {
+        "http_proxy": {
+          "enabled": true,
+          "server": "127.0.0.1",
+          "server_port": 1081
+        }
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "tag": "select",
+      "type": "selector",
+      "outbounds": [
+        "auto",
+        "🇸🇪 سوئد \r",
+        "🇱🇺 لوگزامبورگ \r",
+        "🇨🇴 کلمبیا \r",
+        "🇦🇱 آلبانی ۳\r",
+        "بلژیک 🇧🇪 \r",
+        "جزیره من 🇮🇲 ۱\r",
+        "🇬🇷 یونان \r",
+        "🇮🇸 ایسلند ۲\r",
+        "🇮🇱 اسرائیل ۱\r",
+        "آلبانی 🇦🇱\r",
+        "ایتالیا 🇮🇹\r",
+        "مولداوی 🇦🇩\r",
+        "روسیه 🇷🇺\r",
+        "ترکیه 🇹🇷\r",
+        "پرتقال 🇵🇹\r",
+        "شیلی 🇨🇱\r",
+        "آلبانی 🇦🇱 ۲\r",
+        "هلند 🇳🇱 \r",
+        "نروژ 🇸🇯 ۱\r",
+        "اسرائیل 🇮🇱 ۳\r",
+        "🇮🇲 جزیره من\r",
+        "جزیره من 🇮🇲 ۲\r",
+        "🇱🇹 لیتوانی \r",
+        "نروژ 🇸🇯 ۲\r",
+        "🇷🇴 رومانی \r",
+        "فرانسه 🇨🇵\r",
+        "🇲🇩 مولداوی ۲\r",
+        "قبرس 🇨🇾\r",
+        "اسرائیل 🇮🇱\r",
+        "🇬🇷 یونان ۱\r",
+        "لندن 🇬🇧 ۱\r",
+        "لندن 🇬🇧 ۲\r",
+        "اسرائیل 🇮🇱 (1)\r",
+        "🇺🇸 آمریکا \r",
+        "اکوادور 🇪🇨\r",
+        "🇺🇾 اروگوئه \r",
+        "هلند 🇳🇱\r",
+        "🇻🇳 ویتنام \r",
+        "🇵🇦 پاناما \r",
+        "آرژانتین 🇦🇷\r",
+        "سنگاپور 🇸🇬\r",
+        "🇬🇹 گواتمالا \r",
+        "🇲🇦 مراکش \r",
+        "🇵🇭 فیلیپین \r",
+        "🇦🇺 استرالیا \r",
+        "🇧🇬 بلغارستان \r",
+        "🎲x2@oneclickvpnkeys\r",
+        "رایگان | VLESS | @forwardv2ray | CA🇨🇦 | 0️⃣7️⃣\r",
+        "رایگان | VMESS | @prrofile_purple | CA🇨🇦 | 0️⃣2️⃣",
+        "رایگان | VMESS | @customv2ray | US🇺🇸 | 0️⃣3️⃣",
+        "رایگان | VMESS | @prrofile_purple | CA🇨🇦 | 0️⃣5️⃣",
+        "رایگان | VMESS | @vless_vmess | US🇺🇸 | 0️⃣2️⃣",
+        "رایگان | VMESS | @vless_vmess | CA🇨🇦 | 0️⃣5️⃣",
+        "لندن 🇬🇧",
+        "رایگان | VMESS | @v2Line | US🇺🇸 | 0️⃣3️⃣",
+        "رایگان | VMESS | @ROMAX_VPN | CA🇨🇦 | 0️⃣3️⃣",
+        "رایگان | VMESS | @ROMAX_VPN | CA🇨🇦 | 0️⃣4️⃣",
+        "رایگان | VLESS | @v2rayngvpn | CA🇨🇦 | 0️⃣4️⃣\r",
+        "رایگان | VLESS | @v2rayng_vpnrog | CA🇨🇦 | 0️⃣1️⃣\r",
+        "رایگان | VLESS | @ROMAX_VPN | US🇺🇸 | 0️⃣1️⃣\r"
+      ]
+    },
+    {
+      "tag": "auto",
+      "type": "urltest",
+      "outbounds": [
+        "🇸🇪 سوئد \r",
+        "🇱🇺 لوگزامبورگ \r",
+        "🇨🇴 کلمبیا \r",
+        "🇦🇱 آلبانی ۳\r",
+        "بلژیک 🇧🇪 \r",
+        "جزیره من 🇮🇲 ۱\r",
+        "🇬🇷 یونان \r",
+        "🇮🇸 ایسلند ۲\r",
+        "🇮🇱 اسرائیل ۱\r",
+        "آلبانی 🇦🇱\r",
+        "ایتالیا 🇮🇹\r",
+        "مولداوی 🇦🇩\r",
+        "روسیه 🇷🇺\r",
+        "ترکیه 🇹🇷\r",
+        "پرتقال 🇵🇹\r",
+        "شیلی 🇨🇱\r",
+        "آلبانی 🇦🇱 ۲\r",
+        "هلند 🇳🇱 \r",
+        "نروژ 🇸🇯 ۱\r",
+        "اسرائیل 🇮🇱 ۳\r",
+        "🇮🇲 جزیره من\r",
+        "جزیره من 🇮🇲 ۲\r",
+        "🇱🇹 لیتوانی \r",
+        "نروژ 🇸🇯 ۲\r",
+        "🇷🇴 رومانی \r",
+        "فرانسه 🇨🇵\r",
+        "🇲🇩 مولداوی ۲\r",
+        "قبرس 🇨🇾\r",
+        "اسرائیل 🇮🇱\r",
+        "🇬🇷 یونان ۱\r",
+        "لندن 🇬🇧 ۱\r",
+        "لندن 🇬🇧 ۲\r",
+        "اسرائیل 🇮🇱 (1)\r",
+        "🇺🇸 آمریکا \r",
+        "اکوادور 🇪🇨\r",
+        "🇺🇾 اروگوئه \r",
+        "هلند 🇳🇱\r",
+        "🇻🇳 ویتنام \r",
+        "🇵🇦 پاناما \r",
+        "آرژانتین 🇦🇷\r",
+        "سنگاپور 🇸🇬\r",
+        "🇬🇹 گواتمالا \r",
+        "🇲🇦 مراکش \r",
+        "🇵🇭 فیلیپین \r",
+        "🇦🇺 استرالیا \r",
+        "🇧🇬 بلغارستان \r",
+        "🎲x2@oneclickvpnkeys\r",
+        "رایگان | VLESS | @forwardv2ray | CA🇨🇦 | 0️⃣7️⃣\r",
+        "رایگان | VMESS | @prrofile_purple | CA🇨🇦 | 0️⃣2️⃣",
+        "رایگان | VMESS | @customv2ray | US🇺🇸 | 0️⃣3️⃣",
+        "رایگان | VMESS | @prrofile_purple | CA🇨🇦 | 0️⃣5️⃣",
+        "رایگان | VMESS | @vless_vmess | US🇺🇸 | 0️⃣2️⃣",
+        "رایگان | VMESS | @vless_vmess | CA🇨🇦 | 0️⃣5️⃣",
+        "لندن 🇬🇧",
+        "رایگان | VMESS | @v2Line | US🇺🇸 | 0️⃣3️⃣",
+        "رایگان | VMESS | @ROMAX_VPN | CA🇨🇦 | 0️⃣3️⃣",
+        "رایگان | VMESS | @ROMAX_VPN | CA🇨🇦 | 0️⃣4️⃣",
+        "رایگان | VLESS | @v2rayngvpn | CA🇨🇦 | 0️⃣4️⃣\r",
+        "رایگان | VLESS | @v2rayng_vpnrog | CA🇨🇦 | 0️⃣1️⃣\r",
+        "رایگان | VLESS | @ROMAX_VPN | US🇺🇸 | 0️⃣1️⃣\r"
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "1m",
+      "tolerance": 50
+    },
+    {
+      "tag": "🤖 OpenAI",
+      "type": "selector",
+      "outbounds": [
+        "direct",
+        "🇸🇪 سوئد \r",
+        "🇱🇺 لوگزامبورگ \r",
+        "🇨🇴 کلمبیا \r",
+        "🇦🇱 آلبانی ۳\r",
+        "بلژیک 🇧🇪 \r",
+        "جزیره من 🇮🇲 ۱\r",
+        "🇬🇷 یونان \r",
+        "🇮🇸 ایسلند ۲\r",
+        "🇮🇱 اسرائیل ۱\r",
+        "آلبانی 🇦🇱\r",
+        "ایتالیا 🇮🇹\r",
+        "مولداوی 🇦🇩\r",
+        "روسیه 🇷🇺\r",
+        "ترکیه 🇹🇷\r",
+        "پرتقال 🇵🇹\r",
+        "شیلی 🇨🇱\r",
+        "آلبانی 🇦🇱 ۲\r",
+        "هلند 🇳🇱 \r",
+        "نروژ 🇸🇯 ۱\r",
+        "اسرائیل 🇮🇱 ۳\r",
+        "🇮🇲 جزیره من\r",
+        "جزیره من 🇮🇲 ۲\r",
+        "🇱🇹 لیتوانی \r",
+        "نروژ 🇸🇯 ۲\r",
+        "🇷🇴 رومانی \r",
+        "فرانسه 🇨🇵\r",
+        "🇲🇩 مولداوی ۲\r",
+        "قبرس 🇨🇾\r",
+        "اسرائیل 🇮🇱\r",
+        "🇬🇷 یونان ۱\r",
+        "لندن 🇬🇧 ۱\r",
+        "لندن 🇬🇧 ۲\r",
+        "اسرائیل 🇮🇱 (1)\r",
+        "🇺🇸 آمریکا \r",
+        "اکوادور 🇪🇨\r",
+        "🇺🇾 اروگوئه \r",
+        "هلند 🇳🇱\r",
+        "🇻🇳 ویتنام \r",
+        "🇵🇦 پاناما \r",
+        "آرژانتین 🇦🇷\r",
+        "سنگاپور 🇸🇬\r",
+        "🇬🇹 گواتمالا \r",
+        "🇲🇦 مراکش \r",
+        "🇵🇭 فیلیپین \r",
+        "🇦🇺 استرالیا \r",
+        "🇧🇬 بلغارستان \r",
+        "🎲x2@oneclickvpnkeys\r",
+        "رایگان | VLESS | @forwardv2ray | CA🇨🇦 | 0️⃣7️⃣\r",
+        "رایگان | VMESS | @prrofile_purple | CA🇨🇦 | 0️⃣2️⃣",
+        "رایگان | VMESS | @customv2ray | US🇺🇸 | 0️⃣3️⃣",
+        "رایگان | VMESS | @prrofile_purple | CA🇨🇦 | 0️⃣5️⃣",
+        "رایگان | VMESS | @vless_vmess | US🇺🇸 | 0️⃣2️⃣",
+        "رایگان | VMESS | @vless_vmess | CA🇨🇦 | 0️⃣5️⃣",
+        "لندن 🇬🇧",
+        "رایگان | VMESS | @v2Line | US🇺🇸 | 0️⃣3️⃣",
+        "رایگان | VMESS | @ROMAX_VPN | CA🇨🇦 | 0️⃣3️⃣",
+        "رایگان | VMESS | @ROMAX_VPN | CA🇨🇦 | 0️⃣4️⃣",
+        "رایگان | VLESS | @v2rayngvpn | CA🇨🇦 | 0️⃣4️⃣\r",
+        "رایگان | VLESS | @v2rayng_vpnrog | CA🇨🇦 | 0️⃣1️⃣\r",
+        "رایگان | VLESS | @ROMAX_VPN | US🇺🇸 | 0️⃣1️⃣\r"
+      ]
+    },
+    {
+      "tag": "🌌 Google",
+      "type": "selector",
+      "outbounds": [
+        "🇸🇪 سوئد \r",
+        "🇱🇺 لوگزامبورگ \r",
+        "🇨🇴 کلمبیا \r",
+        "🇦🇱 آلبانی ۳\r",
+        "بلژیک 🇧🇪 \r",
+        "جزیره من 🇮🇲 ۱\r",
+        "🇬🇷 یونان \r",
+        "🇮🇸 ایسلند ۲\r",
+        "🇮🇱 اسرائیل ۱\r",
+        "آلبانی 🇦🇱\r",
+        "ایتالیا 🇮🇹\r",
+        "مولداوی 🇦🇩\r",
+        "روسیه 🇷🇺\r",
+        "ترکیه 🇹🇷\r",
+        "پرتقال 🇵🇹\r",
+        "شیلی 🇨🇱\r",
+        "آلبانی 🇦🇱 ۲\r",
+        "هلند 🇳🇱 \r",
+        "نروژ 🇸🇯 ۱\r",
+        "اسرائیل 🇮🇱 ۳\r",
+        "🇮🇲 جزیره من\r",
+        "جزیره من 🇮🇲 ۲\r",
+        "🇱🇹 لیتوانی \r",
+        "نروژ 🇸🇯 ۲\r",
+        "🇷🇴 رومانی \r",
+        "فرانسه 🇨🇵\r",
+        "🇲🇩 مولداوی ۲\r",
+        "قبرس 🇨🇾\r",
+        "اسرائیل 🇮🇱\r",
+        "🇬🇷 یونان ۱\r",
+        "لندن 🇬🇧 ۱\r",
+        "لندن 🇬🇧 ۲\r",
+        "اسرائیل 🇮🇱 (1)\r",
+        "🇺🇸 آمریکا \r",
+        "اکوادور 🇪🇨\r",
+        "🇺🇾 اروگوئه \r",
+        "هلند 🇳🇱\r",
+        "🇻🇳 ویتنام \r",
+        "🇵🇦 پاناما \r",
+        "آرژانتین 🇦🇷\r",
+        "سنگاپور 🇸🇬\r",
+        "🇬🇹 گواتمالا \r",
+        "🇲🇦 مراکش \r",
+        "🇵🇭 فیلیپین \r",
+        "🇦🇺 استرالیا \r",
+        "🇧🇬 بلغارستان \r",
+        "🎲x2@oneclickvpnkeys\r",
+        "رایگان | VLESS | @forwardv2ray | CA🇨🇦 | 0️⃣7️⃣\r",
+        "رایگان | VMESS | @prrofile_purple | CA🇨🇦 | 0️⃣2️⃣",
+        "رایگان | VMESS | @customv2ray | US🇺🇸 | 0️⃣3️⃣",
+        "رایگان | VMESS | @prrofile_purple | CA🇨🇦 | 0️⃣5️⃣",
+        "رایگان | VMESS | @vless_vmess | US🇺🇸 | 0️⃣2️⃣",
+        "رایگان | VMESS | @vless_vmess | CA🇨🇦 | 0️⃣5️⃣",
+        "لندن 🇬🇧",
+        "رایگان | VMESS | @v2Line | US🇺🇸 | 0️⃣3️⃣",
+        "رایگان | VMESS | @ROMAX_VPN | CA🇨🇦 | 0️⃣3️⃣",
+        "رایگان | VMESS | @ROMAX_VPN | CA🇨🇦 | 0️⃣4️⃣",
+        "رایگان | VLESS | @v2rayngvpn | CA🇨🇦 | 0️⃣4️⃣\r",
+        "رایگان | VLESS | @v2rayng_vpnrog | CA🇨🇦 | 0️⃣1️⃣\r",
+        "رایگان | VLESS | @ROMAX_VPN | US🇺🇸 | 0️⃣1️⃣\r"
+      ]
+    },
+    {
+      "tag": "📟 Telegram",
+      "type": "selector",
+      "outbounds": [
+        "🇸🇪 سوئد \r",
+        "🇱🇺 لوگزامبورگ \r",
+        "🇨🇴 کلمبیا \r",
+        "🇦🇱 آلبانی ۳\r",
+        "بلژیک 🇧🇪 \r",
+        "جزیره من 🇮🇲 ۱\r",
+        "🇬🇷 یونان \r",
+        "🇮🇸 ایسلند ۲\r",
+        "🇮🇱 اسرائیل ۱\r",
+        "آلبانی 🇦🇱\r",
+        "ایتالیا 🇮🇹\r",
+        "مولداوی 🇦🇩\r",
+        "روسیه 🇷🇺\r",
+        "ترکیه 🇹🇷\r",
+        "پرتقال 🇵🇹\r",
+        "شیلی 🇨🇱\r",
+        "آلبانی 🇦🇱 ۲\r",
+        "هلند 🇳🇱 \r",
+        "نروژ 🇸🇯 ۱\r",
+        "اسرائیل 🇮🇱 ۳\r",
+        "🇮🇲 جزیره من\r",
+        "جزیره من 🇮🇲 ۲\r",
+        "🇱🇹 لیتوانی \r",
+        "نروژ 🇸🇯 ۲\r",
+        "🇷🇴 رومانی \r",
+        "فرانسه 🇨🇵\r",
+        "🇲🇩 مولداوی ۲\r",
+        "قبرس 🇨🇾\r",
+        "اسرائیل 🇮🇱\r",
+        "🇬🇷 یونان ۱\r",
+        "لندن 🇬🇧 ۱\r",
+        "لندن 🇬🇧 ۲\r",
+        "اسرائیل 🇮🇱 (1)\r",
+        "🇺🇸 آمریکا \r",
+        "اکوادور 🇪🇨\r",
+        "🇺🇾 اروگوئه \r",
+        "هلند 🇳🇱\r",
+        "🇻🇳 ویتنام \r",
+        "🇵🇦 پاناما \r",
+        "آرژانتین 🇦🇷\r",
+        "سنگاپور 🇸🇬\r",
+        "🇬🇹 گواتمالا \r",
+        "🇲🇦 مراکش \r",
+        "🇵🇭 فیلیپین \r",
+        "🇦🇺 استرالیا \r",
+        "🇧🇬 بلغارستان \r",
+        "🎲x2@oneclickvpnkeys\r",
+        "رایگان | VLESS | @forwardv2ray | CA🇨🇦 | 0️⃣7️⃣\r",
+        "رایگان | VMESS | @prrofile_purple | CA🇨🇦 | 0️⃣2️⃣",
+        "رایگان | VMESS | @customv2ray | US🇺🇸 | 0️⃣3️⃣",
+        "رایگان | VMESS | @prrofile_purple | CA🇨🇦 | 0️⃣5️⃣",
+        "رایگان | VMESS | @vless_vmess | US🇺🇸 | 0️⃣2️⃣",
+        "رایگان | VMESS | @vless_vmess | CA🇨🇦 | 0️⃣5️⃣",
+        "لندن 🇬🇧",
+        "رایگان | VMESS | @v2Line | US🇺🇸 | 0️⃣3️⃣",
+        "رایگان | VMESS | @ROMAX_VPN | CA🇨🇦 | 0️⃣3️⃣",
+        "رایگان | VMESS | @ROMAX_VPN | CA🇨🇦 | 0️⃣4️⃣",
+        "رایگان | VLESS | @v2rayngvpn | CA🇨🇦 | 0️⃣4️⃣\r",
+        "رایگان | VLESS | @v2rayng_vpnrog | CA🇨🇦 | 0️⃣1️⃣\r",
+        "رایگان | VLESS | @ROMAX_VPN | US🇺🇸 | 0️⃣1️⃣\r"
+      ]
+    },
+    {
+      "tag": "🐦 Twitter",
+      "type": "selector",
+      "outbounds": [
+        "🇸🇪 سوئد \r",
+        "🇱🇺 لوگزامبورگ \r",
+        "🇨🇴 کلمبیا \r",
+        "🇦🇱 آلبانی ۳\r",
+        "بلژیک 🇧🇪 \r",
+        "جزیره من 🇮🇲 ۱\r",
+        "🇬🇷 یونان \r",
+        "🇮🇸 ایسلند ۲\r",
+        "🇮🇱 اسرائیل ۱\r",
+        "آلبانی 🇦🇱\r",
+        "ایتالیا 🇮🇹\r",
+        "مولداوی 🇦🇩\r",
+        "روسیه 🇷🇺\r",
+        "ترکیه 🇹🇷\r",
+        "پرتقال 🇵🇹\r",
+        "شیلی 🇨🇱\r",
+        "آلبانی 🇦🇱 ۲\r",
+        "هلند 🇳🇱 \r",
+        "نروژ 🇸🇯 ۱\r",
+        "اسرائیل 🇮🇱 ۳\r",
+        "🇮🇲 جزیره من\r",
+        "جزیره من 🇮🇲 ۲\r",
+        "🇱🇹 لیتوانی \r",
+        "نروژ 🇸🇯 ۲\r",
+        "🇷🇴 رومانی \r",
+        "فرانسه 🇨🇵\r",
+        "🇲🇩 مولداوی ۲\r",
+        "قبرس 🇨🇾\r",
+        "اسرائیل 🇮🇱\r",
+        "🇬🇷 یونان ۱\r",
+        "لندن 🇬🇧 ۱\r",
+        "لندن 🇬🇧 ۲\r",
+        "اسرائیل 🇮🇱 (1)\r",
+        "🇺🇸 آمریکا \r",
+        "اکوادور 🇪🇨\r",
+        "🇺🇾 اروگوئه \r",
+        "هلند 🇳🇱\r",
+        "🇻🇳 ویتنام \r",
+        "🇵🇦 پاناما \r",
+        "آرژانتین 🇦🇷\r",
+        "سنگاپور 🇸🇬\r",
+        "🇬🇹 گواتمالا \r",
+        "🇲🇦 مراکش \r",
+        "🇵🇭 فیلیپین \r",
+        "🇦🇺 استرالیا \r",
+        "🇧🇬 بلغارستان \r",
+        "🎲x2@oneclickvpnkeys\r",
+        "رایگان | VLESS | @forwardv2ray | CA🇨🇦 | 0️⃣7️⃣\r",
+        "رایگان | VMESS | @prrofile_purple | CA🇨🇦 | 0️⃣2️⃣",
+        "رایگان | VMESS | @customv2ray | US🇺🇸 | 0️⃣3️⃣",
+        "رایگان | VMESS | @prrofile_purple | CA🇨🇦 | 0️⃣5️⃣",
+        "رایگان | VMESS | @vless_vmess | US🇺🇸 | 0️⃣2️⃣",
+        "رایگان | VMESS | @vless_vmess | CA🇨🇦 | 0️⃣5️⃣",
+        "لندن 🇬🇧",
+        "رایگان | VMESS | @v2Line | US🇺🇸 | 0️⃣3️⃣",
+        "رایگان | VMESS | @ROMAX_VPN | CA🇨🇦 | 0️⃣3️⃣",
+        "رایگان | VMESS | @ROMAX_VPN | CA🇨🇦 | 0️⃣4️⃣",
+        "رایگان | VLESS | @v2rayngvpn | CA🇨🇦 | 0️⃣4️⃣\r",
+        "رایگان | VLESS | @v2rayng_vpnrog | CA🇨🇦 | 0️⃣1️⃣\r",
+        "رایگان | VLESS | @ROMAX_VPN | US🇺🇸 | 0️⃣1️⃣\r"
+      ]
+    },
+    {
+      "tag": "👤 Facebook",
+      "type": "selector",
+      "outbounds": [
+        "🇸🇪 سوئد \r",
+        "🇱🇺 لوگزامبورگ \r",
+        "🇨🇴 کلمبیا \r",
+        "🇦🇱 آلبانی ۳\r",
+        "بلژیک 🇧🇪 \r",
+        "جزیره من 🇮🇲 ۱\r",
+        "🇬🇷 یونان \r",
+        "🇮🇸 ایسلند ۲\r",
+        "🇮🇱 اسرائیل ۱\r",
+        "آلبانی 🇦🇱\r",
+        "ایتالیا 🇮🇹\r",
+        "مولداوی 🇦🇩\r",
+        "روسیه 🇷🇺\r",
+        "ترکیه 🇹🇷\r",
+        "پرتقال 🇵🇹\r",
+        "شیلی 🇨🇱\r",
+        "آلبانی 🇦🇱 ۲\r",
+        "هلند 🇳🇱 \r",
+        "نروژ 🇸🇯 ۱\r",
+        "اسرائیل 🇮🇱 ۳\r",
+        "🇮🇲 جزیره من\r",
+        "جزیره من 🇮🇲 ۲\r",
+        "🇱🇹 لیتوانی \r",
+        "نروژ 🇸🇯 ۲\r",
+        "🇷🇴 رومانی \r",
+        "فرانسه 🇨🇵\r",
+        "🇲🇩 مولداوی ۲\r",
+        "قبرس 🇨🇾\r",
+        "اسرائیل 🇮🇱\r",
+        "🇬🇷 یونان ۱\r",
+        "لندن 🇬🇧 ۱\r",
+        "لندن 🇬🇧 ۲\r",
+        "اسرائیل 🇮🇱 (1)\r",
+        "🇺🇸 آمریکا \r",
+        "اکوادور 🇪🇨\r",
+        "🇺🇾 اروگوئه \r",
+        "هلند 🇳🇱\r",
+        "🇻🇳 ویتنام \r",
+        "🇵🇦 پاناما \r",
+        "آرژانتین 🇦🇷\r",
+        "سنگاپور 🇸🇬\r",
+        "🇬🇹 گواتمالا \r",
+        "🇲🇦 مراکش \r",
+        "🇵🇭 فیلیپین \r",
+        "🇦🇺 استرالیا \r",
+        "🇧🇬 بلغارستان \r",
+        "🎲x2@oneclickvpnkeys\r",
+        "رایگان | VLESS | @forwardv2ray | CA🇨🇦 | 0️⃣7️⃣\r",
+        "رایگان | VMESS | @prrofile_purple | CA🇨🇦 | 0️⃣2️⃣",
+        "رایگان | VMESS | @customv2ray | US🇺🇸 | 0️⃣3️⃣",
+        "رایگان | VMESS | @prrofile_purple | CA🇨🇦 | 0️⃣5️⃣",
+        "رایگان | VMESS | @vless_vmess | US🇺🇸 | 0️⃣2️⃣",
+        "رایگان | VMESS | @vless_vmess | CA🇨🇦 | 0️⃣5️⃣",
+        "لندن 🇬🇧",
+        "رایگان | VMESS | @v2Line | US🇺🇸 | 0️⃣3️⃣",
+        "رایگان | VMESS | @ROMAX_VPN | CA🇨🇦 | 0️⃣3️⃣",
+        "رایگان | VMESS | @ROMAX_VPN | CA🇨🇦 | 0️⃣4️⃣",
+        "رایگان | VLESS | @v2rayngvpn | CA🇨🇦 | 0️⃣4️⃣\r",
+        "رایگان | VLESS | @v2rayng_vpnrog | CA🇨🇦 | 0️⃣1️⃣\r",
+        "رایگان | VLESS | @ROMAX_VPN | US🇺🇸 | 0️⃣1️⃣\r"
+      ]
+    },
+    {
+      "tag": "🛍️ Amazon",
+      "type": "selector",
+      "outbounds": [
+        "direct",
+        "🇸🇪 سوئد \r",
+        "🇱🇺 لوگزامبورگ \r",
+        "🇨🇴 کلمبیا \r",
+        "🇦🇱 آلبانی ۳\r",
+        "بلژیک 🇧🇪 \r",
+        "جزیره من 🇮🇲 ۱\r",
+        "🇬🇷 یونان \r",
+        "🇮🇸 ایسلند ۲\r",
+        "🇮🇱 اسرائیل ۱\r",
+        "آلبانی 🇦🇱\r",
+        "ایتالیا 🇮🇹\r",
+        "مولداوی 🇦🇩\r",
+        "روسیه 🇷🇺\r",
+        "ترکیه 🇹🇷\r",
+        "پرتقال 🇵🇹\r",
+        "شیلی 🇨🇱\r",
+        "آلبانی 🇦🇱 ۲\r",
+        "هلند 🇳🇱 \r",
+        "نروژ 🇸🇯 ۱\r",
+        "اسرائیل 🇮🇱 ۳\r",
+        "🇮🇲 جزیره من\r",
+        "جزیره من 🇮🇲 ۲\r",
+        "🇱🇹 لیتوانی \r",
+        "نروژ 🇸🇯 ۲\r",
+        "🇷🇴 رومانی \r",
+        "فرانسه 🇨🇵\r",
+        "🇲🇩 مولداوی ۲\r",
+        "قبرس 🇨🇾\r",
+        "اسرائیل 🇮🇱\r",
+        "🇬🇷 یونان ۱\r",
+        "لندن 🇬🇧 ۱\r",
+        "لندن 🇬🇧 ۲\r",
+        "اسرائیل 🇮🇱 (1)\r",
+        "🇺🇸 آمریکا \r",
+        "اکوادور 🇪🇨\r",
+        "🇺🇾 اروگوئه \r",
+        "هلند 🇳🇱\r",
+        "🇻🇳 ویتنام \r",
+        "🇵🇦 پاناما \r",
+        "آرژانتین 🇦🇷\r",
+        "سنگاپور 🇸🇬\r",
+        "🇬🇹 گواتمالا \r",
+        "🇲🇦 مراکش \r",
+        "🇵🇭 فیلیپین \r",
+        "🇦🇺 استرالیا \r",
+        "🇧🇬 بلغارستان \r",
+        "🎲x2@oneclickvpnkeys\r",
+        "رایگان | VLESS | @forwardv2ray | CA🇨🇦 | 0️⃣7️⃣\r",
+        "رایگان | VMESS | @prrofile_purple | CA🇨🇦 | 0️⃣2️⃣",
+        "رایگان | VMESS | @customv2ray | US🇺🇸 | 0️⃣3️⃣",
+        "رایگان | VMESS | @prrofile_purple | CA🇨🇦 | 0️⃣5️⃣",
+        "رایگان | VMESS | @vless_vmess | US🇺🇸 | 0️⃣2️⃣",
+        "رایگان | VMESS | @vless_vmess | CA🇨🇦 | 0️⃣5️⃣",
+        "لندن 🇬🇧",
+        "رایگان | VMESS | @v2Line | US🇺🇸 | 0️⃣3️⃣",
+        "رایگان | VMESS | @ROMAX_VPN | CA🇨🇦 | 0️⃣3️⃣",
+        "رایگان | VMESS | @ROMAX_VPN | CA🇨🇦 | 0️⃣4️⃣",
+        "رایگان | VLESS | @v2rayngvpn | CA🇨🇦 | 0️⃣4️⃣\r",
+        "رایگان | VLESS | @v2rayng_vpnrog | CA🇨🇦 | 0️⃣1️⃣\r",
+        "رایگان | VLESS | @ROMAX_VPN | US🇺🇸 | 0️⃣1️⃣\r"
+      ]
+    },
+    {
+      "tag": "🍎 Apple",
+      "type": "selector",
+      "outbounds": [
+        "direct",
+        "🇸🇪 سوئد \r",
+        "🇱🇺 لوگزامبورگ \r",
+        "🇨🇴 کلمبیا \r",
+        "🇦🇱 آلبانی ۳\r",
+        "بلژیک 🇧🇪 \r",
+        "جزیره من 🇮🇲 ۱\r",
+        "🇬🇷 یونان \r",
+        "🇮🇸 ایسلند ۲\r",
+        "🇮🇱 اسرائیل ۱\r",
+        "آلبانی 🇦🇱\r",
+        "ایتالیا 🇮🇹\r",
+        "مولداوی 🇦🇩\r",
+        "روسیه 🇷🇺\r",
+        "ترکیه 🇹🇷\r",
+        "پرتقال 🇵🇹\r",
+        "شیلی 🇨🇱\r",
+        "آلبانی 🇦🇱 ۲\r",
+        "هلند 🇳🇱 \r",
+        "نروژ 🇸🇯 ۱\r",
+        "اسرائیل 🇮🇱 ۳\r",
+        "🇮🇲 جزیره من\r",
+        "جزیره من 🇮🇲 ۲\r",
+        "🇱🇹 لیتوانی \r",
+        "نروژ 🇸🇯 ۲\r",
+        "🇷🇴 رومانی \r",
+        "فرانسه 🇨🇵\r",
+        "🇲🇩 مولداوی ۲\r",
+        "قبرس 🇨🇾\r",
+        "اسرائیل 🇮🇱\r",
+        "🇬🇷 یونان ۱\r",
+        "لندن 🇬🇧 ۱\r",
+        "لندن 🇬🇧 ۲\r",
+        "اسرائیل 🇮🇱 (1)\r",
+        "🇺🇸 آمریکا \r",
+        "اکوادور 🇪🇨\r",
+        "🇺🇾 اروگوئه \r",
+        "هلند 🇳🇱\r",
+        "🇻🇳 ویتنام \r",
+        "🇵🇦 پاناما \r",
+        "آرژانتین 🇦🇷\r",
+        "سنگاپور 🇸🇬\r",
+        "🇬🇹 گواتمالا \r",
+        "🇲🇦 مراکش \r",
+        "🇵🇭 فیلیپین \r",
+        "🇦🇺 استرالیا \r",
+        "🇧🇬 بلغارستان \r",
+        "🎲x2@oneclickvpnkeys\r",
+        "رایگان | VLESS | @forwardv2ray | CA🇨🇦 | 0️⃣7️⃣\r",
+        "رایگان | VMESS | @prrofile_purple | CA🇨🇦 | 0️⃣2️⃣",
+        "رایگان | VMESS | @customv2ray | US🇺🇸 | 0️⃣3️⃣",
+        "رایگان | VMESS | @prrofile_purple | CA🇨🇦 | 0️⃣5️⃣",
+        "رایگان | VMESS | @vless_vmess | US🇺🇸 | 0️⃣2️⃣",
+        "رایگان | VMESS | @vless_vmess | CA🇨🇦 | 0️⃣5️⃣",
+        "لندن 🇬🇧",
+        "رایگان | VMESS | @v2Line | US🇺🇸 | 0️⃣3️⃣",
+        "رایگان | VMESS | @ROMAX_VPN | CA🇨🇦 | 0️⃣3️⃣",
+        "رایگان | VMESS | @ROMAX_VPN | CA🇨🇦 | 0️⃣4️⃣",
+        "رایگان | VLESS | @v2rayngvpn | CA🇨🇦 | 0️⃣4️⃣\r",
+        "رایگان | VLESS | @v2rayng_vpnrog | CA🇨🇦 | 0️⃣1️⃣\r",
+        "رایگان | VLESS | @ROMAX_VPN | US🇺🇸 | 0️⃣1️⃣\r"
+      ]
+    },
+    {
+      "tag": "🧩 Microsoft",
+      "type": "selector",
+      "outbounds": [
+        "direct",
+        "🇸🇪 سوئد \r",
+        "🇱🇺 لوگزامبورگ \r",
+        "🇨🇴 کلمبیا \r",
+        "🇦🇱 آلبانی ۳\r",
+        "بلژیک 🇧🇪 \r",
+        "جزیره من 🇮🇲 ۱\r",
+        "🇬🇷 یونان \r",
+        "🇮🇸 ایسلند ۲\r",
+        "🇮🇱 اسرائیل ۱\r",
+        "آلبانی 🇦🇱\r",
+        "ایتالیا 🇮🇹\r",
+        "مولداوی 🇦🇩\r",
+        "روسیه 🇷🇺\r",
+        "ترکیه 🇹🇷\r",
+        "پرتقال 🇵🇹\r",
+        "شیلی 🇨🇱\r",
+        "آلبانی 🇦🇱 ۲\r",
+        "هلند 🇳🇱 \r",
+        "نروژ 🇸🇯 ۱\r",
+        "اسرائیل 🇮🇱 ۳\r",
+        "🇮🇲 جزیره من\r",
+        "جزیره من 🇮🇲 ۲\r",
+        "🇱🇹 لیتوانی \r",
+        "نروژ 🇸🇯 ۲\r",
+        "🇷🇴 رومانی \r",
+        "فرانسه 🇨🇵\r",
+        "🇲🇩 مولداوی ۲\r",
+        "قبرس 🇨🇾\r",
+        "اسرائیل 🇮🇱\r",
+        "🇬🇷 یونان ۱\r",
+        "لندن 🇬🇧 ۱\r",
+        "لندن 🇬🇧 ۲\r",
+        "اسرائیل 🇮🇱 (1)\r",
+        "🇺🇸 آمریکا \r",
+        "اکوادور 🇪🇨\r",
+        "🇺🇾 اروگوئه \r",
+        "هلند 🇳🇱\r",
+        "🇻🇳 ویتنام \r",
+        "🇵🇦 پاناما \r",
+        "آرژانتین 🇦🇷\r",
+        "سنگاپور 🇸🇬\r",
+        "🇬🇹 گواتمالا \r",
+        "🇲🇦 مراکش \r",
+        "🇵🇭 فیلیپین \r",
+        "🇦🇺 استرالیا \r",
+        "🇧🇬 بلغارستان \r",
+        "🎲x2@oneclickvpnkeys\r",
+        "رایگان | VLESS | @forwardv2ray | CA🇨🇦 | 0️⃣7️⃣\r",
+        "رایگان | VMESS | @prrofile_purple | CA🇨🇦 | 0️⃣2️⃣",
+        "رایگان | VMESS | @customv2ray | US🇺🇸 | 0️⃣3️⃣",
+        "رایگان | VMESS | @prrofile_purple | CA🇨🇦 | 0️⃣5️⃣",
+        "رایگان | VMESS | @vless_vmess | US🇺🇸 | 0️⃣2️⃣",
+        "رایگان | VMESS | @vless_vmess | CA🇨🇦 | 0️⃣5️⃣",
+        "لندن 🇬🇧",
+        "رایگان | VMESS | @v2Line | US🇺🇸 | 0️⃣3️⃣",
+        "رایگان | VMESS | @ROMAX_VPN | CA🇨🇦 | 0️⃣3️⃣",
+        "رایگان | VMESS | @ROMAX_VPN | CA🇨🇦 | 0️⃣4️⃣",
+        "رایگان | VLESS | @v2rayngvpn | CA🇨🇦 | 0️⃣4️⃣\r",
+        "رایگان | VLESS | @v2rayng_vpnrog | CA🇨🇦 | 0️⃣1️⃣\r",
+        "رایگان | VLESS | @ROMAX_VPN | US🇺🇸 | 0️⃣1️⃣\r"
+      ]
+    },
+    {
+      "tag": "🎮 Game",
+      "type": "selector",
+      "outbounds": [
+        "direct",
+        "🇸🇪 سوئد \r",
+        "🇱🇺 لوگزامبورگ \r",
+        "🇨🇴 کلمبیا \r",
+        "🇦🇱 آلبانی ۳\r",
+        "بلژیک 🇧🇪 \r",
+        "جزیره من 🇮🇲 ۱\r",
+        "🇬🇷 یونان \r",
+        "🇮🇸 ایسلند ۲\r",
+        "🇮🇱 اسرائیل ۱\r",
+        "آلبانی 🇦🇱\r",
+        "ایتالیا 🇮🇹\r",
+        "مولداوی 🇦🇩\r",
+        "روسیه 🇷🇺\r",
+        "ترکیه 🇹🇷\r",
+        "پرتقال 🇵🇹\r",
+        "شیلی 🇨🇱\r",
+        "آلبانی 🇦🇱 ۲\r",
+        "هلند 🇳🇱 \r",
+        "نروژ 🇸🇯 ۱\r",
+        "اسرائیل 🇮🇱 ۳\r",
+        "🇮🇲 جزیره من\r",
+        "جزیره من 🇮🇲 ۲\r",
+        "🇱🇹 لیتوانی \r",
+        "نروژ 🇸🇯 ۲\r",
+        "🇷🇴 رومانی \r",
+        "فرانسه 🇨🇵\r",
+        "🇲🇩 مولداوی ۲\r",
+        "قبرس 🇨🇾\r",
+        "اسرائیل 🇮🇱\r",
+        "🇬🇷 یونان ۱\r",
+        "لندن 🇬🇧 ۱\r",
+        "لندن 🇬🇧 ۲\r",
+        "اسرائیل 🇮🇱 (1)\r",
+        "🇺🇸 آمریکا \r",
+        "اکوادور 🇪🇨\r",
+        "🇺🇾 اروگوئه \r",
+        "هلند 🇳🇱\r",
+        "🇻🇳 ویتنام \r",
+        "🇵🇦 پاناما \r",
+        "آرژانتین 🇦🇷\r",
+        "سنگاپور 🇸🇬\r",
+        "🇬🇹 گواتمالا \r",
+        "🇲🇦 مراکش \r",
+        "🇵🇭 فیلیپین \r",
+        "🇦🇺 استرالیا \r",
+        "🇧🇬 بلغارستان \r",
+        "🎲x2@oneclickvpnkeys\r",
+        "رایگان | VLESS | @forwardv2ray | CA🇨🇦 | 0️⃣7️⃣\r",
+        "رایگان | VMESS | @prrofile_purple | CA🇨🇦 | 0️⃣2️⃣",
+        "رایگان | VMESS | @customv2ray | US🇺🇸 | 0️⃣3️⃣",
+        "رایگان | VMESS | @prrofile_purple | CA🇨🇦 | 0️⃣5️⃣",
+        "رایگان | VMESS | @vless_vmess | US🇺🇸 | 0️⃣2️⃣",
+        "رایگان | VMESS | @vless_vmess | CA🇨🇦 | 0️⃣5️⃣",
+        "لندن 🇬🇧",
+        "رایگان | VMESS | @v2Line | US🇺🇸 | 0️⃣3️⃣",
+        "رایگان | VMESS | @ROMAX_VPN | CA🇨🇦 | 0️⃣3️⃣",
+        "رایگان | VMESS | @ROMAX_VPN | CA🇨🇦 | 0️⃣4️⃣",
+        "رایگان | VLESS | @v2rayngvpn | CA🇨🇦 | 0️⃣4️⃣\r",
+        "رایگان | VLESS | @v2rayng_vpnrog | CA🇨🇦 | 0️⃣1️⃣\r",
+        "رایگان | VLESS | @ROMAX_VPN | US🇺🇸 | 0️⃣1️⃣\r"
+      ]
+    },
+    {
+      "tag": "📺 Bilibili",
+      "type": "selector",
+      "outbounds": [
+        "direct"
+      ]
+    },
+    {
+      "tag": "🎬 MediaVideo",
+      "type": "selector",
+      "outbounds": [
+        "direct",
+        "🇸🇪 سوئد \r",
+        "🇱🇺 لوگزامبورگ \r",
+        "🇨🇴 کلمبیا \r",
+        "🇦🇱 آلبانی ۳\r",
+        "بلژیک 🇧🇪 \r",
+        "جزیره من 🇮🇲 ۱\r",
+        "🇬🇷 یونان \r",
+        "🇮🇸 ایسلند ۲\r",
+        "🇮🇱 اسرائیل ۱\r",
+        "آلبانی 🇦🇱\r",
+        "ایتالیا 🇮🇹\r",
+        "مولداوی 🇦🇩\r",
+        "روسیه 🇷🇺\r",
+        "ترکیه 🇹🇷\r",
+        "پرتقال 🇵🇹\r",
+        "شیلی 🇨🇱\r",
+        "آلبانی 🇦🇱 ۲\r",
+        "هلند 🇳🇱 \r",
+        "نروژ 🇸🇯 ۱\r",
+        "اسرائیل 🇮🇱 ۳\r",
+        "🇮🇲 جزیره من\r",
+        "جزیره من 🇮🇲 ۲\r",
+        "🇱🇹 لیتوانی \r",
+        "نروژ 🇸🇯 ۲\r",
+        "🇷🇴 رومانی \r",
+        "فرانسه 🇨🇵\r",
+        "🇲🇩 مولداوی ۲\r",
+        "قبرس 🇨🇾\r",
+        "اسرائیل 🇮🇱\r",
+        "🇬🇷 یونان ۱\r",
+        "لندن 🇬🇧 ۱\r",
+        "لندن 🇬🇧 ۲\r",
+        "اسرائیل 🇮🇱 (1)\r",
+        "🇺🇸 آمریکا \r",
+        "اکوادور 🇪🇨\r",
+        "🇺🇾 اروگوئه \r",
+        "هلند 🇳🇱\r",
+        "🇻🇳 ویتنام \r",
+        "🇵🇦 پاناما \r",
+        "آرژانتین 🇦🇷\r",
+        "سنگاپور 🇸🇬\r",
+        "🇬🇹 گواتمالا \r",
+        "🇲🇦 مراکش \r",
+        "🇵🇭 فیلیپین \r",
+        "🇦🇺 استرالیا \r",
+        "🇧🇬 بلغارستان \r",
+        "🎲x2@oneclickvpnkeys\r",
+        "رایگان | VLESS | @forwardv2ray | CA🇨🇦 | 0️⃣7️⃣\r",
+        "رایگان | VMESS | @prrofile_purple | CA🇨🇦 | 0️⃣2️⃣",
+        "رایگان | VMESS | @customv2ray | US🇺🇸 | 0️⃣3️⃣",
+        "رایگان | VMESS | @prrofile_purple | CA🇨🇦 | 0️⃣5️⃣",
+        "رایگان | VMESS | @vless_vmess | US🇺🇸 | 0️⃣2️⃣",
+        "رایگان | VMESS | @vless_vmess | CA🇨🇦 | 0️⃣5️⃣",
+        "لندن 🇬🇧",
+        "رایگان | VMESS | @v2Line | US🇺🇸 | 0️⃣3️⃣",
+        "رایگان | VMESS | @ROMAX_VPN | CA🇨🇦 | 0️⃣3️⃣",
+        "رایگان | VMESS | @ROMAX_VPN | CA🇨🇦 | 0️⃣4️⃣",
+        "رایگان | VLESS | @v2rayngvpn | CA🇨🇦 | 0️⃣4️⃣\r",
+        "رایگان | VLESS | @v2rayng_vpnrog | CA🇨🇦 | 0️⃣1️⃣\r",
+        "رایگان | VLESS | @ROMAX_VPN | US🇺🇸 | 0️⃣1️⃣\r"
+      ]
+    },
+    {
+      "tag": "🌏 !cn",
+      "type": "selector",
+      "outbounds": [
+        "direct",
+        "🇸🇪 سوئد \r",
+        "🇱🇺 لوگزامبورگ \r",
+        "🇨🇴 کلمبیا \r",
+        "🇦🇱 آلبانی ۳\r",
+        "بلژیک 🇧🇪 \r",
+        "جزیره من 🇮🇲 ۱\r",
+        "🇬🇷 یونان \r",
+        "🇮🇸 ایسلند ۲\r",
+        "🇮🇱 اسرائیل ۱\r",
+        "آلبانی 🇦🇱\r",
+        "ایتالیا 🇮🇹\r",
+        "مولداوی 🇦🇩\r",
+        "روسیه 🇷🇺\r",
+        "ترکیه 🇹🇷\r",
+        "پرتقال 🇵🇹\r",
+        "شیلی 🇨🇱\r",
+        "آلبانی 🇦🇱 ۲\r",
+        "هلند 🇳🇱 \r",
+        "نروژ 🇸🇯 ۱\r",
+        "اسرائیل 🇮🇱 ۳\r",
+        "🇮🇲 جزیره من\r",
+        "جزیره من 🇮🇲 ۲\r",
+        "🇱🇹 لیتوانی \r",
+        "نروژ 🇸🇯 ۲\r",
+        "🇷🇴 رومانی \r",
+        "فرانسه 🇨🇵\r",
+        "🇲🇩 مولداوی ۲\r",
+        "قبرس 🇨🇾\r",
+        "اسرائیل 🇮🇱\r",
+        "🇬🇷 یونان ۱\r",
+        "لندن 🇬🇧 ۱\r",
+        "لندن 🇬🇧 ۲\r",
+        "اسرائیل 🇮🇱 (1)\r",
+        "🇺🇸 آمریکا \r",
+        "اکوادور 🇪🇨\r",
+        "🇺🇾 اروگوئه \r",
+        "هلند 🇳🇱\r",
+        "🇻🇳 ویتنام \r",
+        "🇵🇦 پاناما \r",
+        "آرژانتین 🇦🇷\r",
+        "سنگاپور 🇸🇬\r",
+        "🇬🇹 گواتمالا \r",
+        "🇲🇦 مراکش \r",
+        "🇵🇭 فیلیپین \r",
+        "🇦🇺 استرالیا \r",
+        "🇧🇬 بلغارستان \r",
+        "🎲x2@oneclickvpnkeys\r",
+        "رایگان | VLESS | @forwardv2ray | CA🇨🇦 | 0️⃣7️⃣\r",
+        "رایگان | VMESS | @prrofile_purple | CA🇨🇦 | 0️⃣2️⃣",
+        "رایگان | VMESS | @customv2ray | US🇺🇸 | 0️⃣3️⃣",
+        "رایگان | VMESS | @prrofile_purple | CA🇨🇦 | 0️⃣5️⃣",
+        "رایگان | VMESS | @vless_vmess | US🇺🇸 | 0️⃣2️⃣",
+        "رایگان | VMESS | @vless_vmess | CA🇨🇦 | 0️⃣5️⃣",
+        "لندن 🇬🇧",
+        "رایگان | VMESS | @v2Line | US🇺🇸 | 0️⃣3️⃣",
+        "رایگان | VMESS | @ROMAX_VPN | CA🇨🇦 | 0️⃣3️⃣",
+        "رایگان | VMESS | @ROMAX_VPN | CA🇨🇦 | 0️⃣4️⃣",
+        "رایگان | VLESS | @v2rayngvpn | CA🇨🇦 | 0️⃣4️⃣\r",
+        "رایگان | VLESS | @v2rayng_vpnrog | CA🇨🇦 | 0️⃣1️⃣\r",
+        "رایگان | VLESS | @ROMAX_VPN | US🇺🇸 | 0️⃣1️⃣\r"
+      ]
+    },
+    {
+      "tag": "🌏 cn",
+      "type": "selector",
+      "outbounds": [
+        "direct",
+        "select"
+      ]
+    },
+    {
+      "tag": "🛑 AdBlock",
+      "type": "selector",
+      "outbounds": [
+        "block",
+        "direct"
+      ]
+    },
+    {
+      "tag": "direct",
+      "type": "direct"
+    },
+    {
+      "tag": "block",
+      "type": "block"
+    },
+    {
+      "tag": "dns-out",
+      "type": "dns"
+    },
+    {
+      "server": "121.127.46.147",
+      "server_port": 989,
+      "password": "f8f7aCzcPKbsF8p3",
+      "method": "aes-256-cfb",
+      "tag": "🇸🇪 سوئد \r",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "92.38.163.53",
+      "server_port": 989,
+      "password": "f8f7aCzcPKbsF8p3",
+      "method": "aes-256-cfb",
+      "tag": "🇱🇺 لوگزامبورگ \r",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "190.120.231.45",
+      "server_port": 989,
+      "password": "f8f7aCzcPKbsF8p3",
+      "method": "aes-256-cfb",
+      "tag": "🇨🇴 کلمبیا \r",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "31.171.153.181",
+      "server_port": 989,
+      "password": "f8f7aCzcPKbsF8p3",
+      "method": "aes-256-cfb",
+      "tag": "🇦🇱 آلبانی ۳\r",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "192.71.249.146",
+      "server_port": 989,
+      "password": "f8f7aCzcPKbsF8p3",
+      "method": "aes-256-cfb",
+      "tag": "بلژیک 🇧🇪 \r",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "192.71.211.161",
+      "server_port": 989,
+      "password": "f8f7aCzcPKbsF8p3",
+      "method": "aes-256-cfb",
+      "tag": "جزیره من 🇮🇲 ۱\r",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "192.71.166.100",
+      "server_port": 989,
+      "password": "f8f7aCzcPKbsF8p3",
+      "method": "aes-256-cfb",
+      "tag": "🇬🇷 یونان \r",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "37.235.49.152",
+      "server_port": 989,
+      "password": "f8f7aCzcPKbsF8p3",
+      "method": "aes-256-cfb",
+      "tag": "🇮🇸 ایسلند ۲\r",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "193.182.144.240",
+      "server_port": 989,
+      "password": "f8f7aCzcPKbsF8p3",
+      "method": "aes-256-cfb",
+      "tag": "🇮🇱 اسرائیل ۱\r",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "31.171.153.178",
+      "server_port": 989,
+      "password": "f8f7aCzcPKbsF8p3",
+      "method": "aes-256-cfb",
+      "tag": "آلبانی 🇦🇱\r",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "185.213.20.227",
+      "server_port": 989,
+      "password": "f8f7aCzcPKbsF8p3",
+      "method": "aes-256-cfb",
+      "tag": "ایتالیا 🇮🇹\r",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "178.175.134.2",
+      "server_port": 989,
+      "password": "f8f7aCzcPKbsF8p3",
+      "method": "aes-256-cfb",
+      "tag": "مولداوی 🇦🇩\r",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "23.90.128.82",
+      "server_port": 989,
+      "password": "f8f7aCzcPKbsF8p3",
+      "method": "aes-256-cfb",
+      "tag": "روسیه 🇷🇺\r",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "185.123.101.241",
+      "server_port": 989,
+      "password": "f8f7aCzcPKbsF8p3",
+      "method": "aes-256-cfb",
+      "tag": "ترکیه 🇹🇷\r",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "185.113.140.22",
+      "server_port": 989,
+      "password": "f8f7aCzcPKbsF8p3",
+      "method": "aes-256-cfb",
+      "tag": "پرتقال 🇵🇹\r",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "190.120.230.9",
+      "server_port": 989,
+      "password": "f8f7aCzcPKbsF8p3",
+      "method": "aes-256-cfb",
+      "tag": "شیلی 🇨🇱\r",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "31.171.153.182",
+      "server_port": 989,
+      "password": "f8f7aCzcPKbsF8p3",
+      "method": "aes-256-cfb",
+      "tag": "آلبانی 🇦🇱 ۲\r",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "163.172.216.44",
+      "server_port": 989,
+      "password": "f8f7aCzcPKbsF8p3",
+      "method": "aes-256-cfb",
+      "tag": "هلند 🇳🇱 \r",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "165.231.120.102",
+      "server_port": 989,
+      "password": "f8f7aCzcPKbsF8p3",
+      "method": "aes-256-cfb",
+      "tag": "نروژ 🇸🇯 ۱\r",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "193.182.144.65",
+      "server_port": 989,
+      "password": "f8f7aCzcPKbsF8p3",
+      "method": "aes-256-cfb",
+      "tag": "اسرائیل 🇮🇱 ۳\r",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "37.235.55.21",
+      "server_port": 989,
+      "password": "f8f7aCzcPKbsF8p3",
+      "method": "aes-256-cfb",
+      "tag": "🇮🇲 جزیره من\r",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "37.235.55.42",
+      "server_port": 989,
+      "password": "f8f7aCzcPKbsF8p3",
+      "method": "aes-256-cfb",
+      "tag": "جزیره من 🇮🇲 ۲\r",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "192.36.61.59",
+      "server_port": 989,
+      "password": "f8f7aCzcPKbsF8p3",
+      "method": "aes-256-cfb",
+      "tag": "🇱🇹 لیتوانی \r",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "185.90.61.153",
+      "server_port": 989,
+      "password": "f8f7aCzcPKbsF8p3",
+      "method": "aes-256-cfb",
+      "tag": "نروژ 🇸🇯 ۲\r",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "194.14.217.89",
+      "server_port": 989,
+      "password": "f8f7aCzcPKbsF8p3",
+      "method": "aes-256-cfb",
+      "tag": "🇷🇴 رومانی \r",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "51.159.77.153",
+      "server_port": 33390,
+      "tls": {
+        "enabled": true
+      },
+      "password": "dongtaiwang.com",
+      "tag": "فرانسه 🇨🇵\r",
+      "type": "hysteria2"
+    },
+    {
+      "server": "192.121.87.147",
+      "server_port": 989,
+      "password": "f8f7aCzcPKbsF8p3",
+      "method": "aes-256-cfb",
+      "tag": "🇲🇩 مولداوی ۲\r",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "213.169.137.221",
+      "server_port": 989,
+      "password": "f8f7aCzcPKbsF8p3",
+      "method": "aes-256-cfb",
+      "tag": "قبرس 🇨🇾\r",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "193.182.144.183",
+      "server_port": 989,
+      "password": "f8f7aCzcPKbsF8p3",
+      "method": "aes-256-cfb",
+      "tag": "اسرائیل 🇮🇱\r",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "192.71.166.102",
+      "server_port": 989,
+      "password": "f8f7aCzcPKbsF8p3",
+      "method": "aes-256-cfb",
+      "tag": "🇬🇷 یونان ۱\r",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "77.72.5.150",
+      "server_port": 989,
+      "password": "f8f7aCzcPKbsF8p3",
+      "method": "aes-256-cfb",
+      "tag": "لندن 🇬🇧 ۱\r",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "77.72.5.113",
+      "server_port": 989,
+      "password": "f8f7aCzcPKbsF8p3",
+      "method": "aes-256-cfb",
+      "tag": "لندن 🇬🇧 ۲\r",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "192.71.27.87",
+      "server_port": 989,
+      "password": "f8f7aCzcPKbsF8p3",
+      "method": "aes-256-cfb",
+      "tag": "اسرائیل 🇮🇱 (1)\r",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "74.121.191.98",
+      "server_port": 989,
+      "password": "f8f7aCzcPKbsF8p3",
+      "method": "aes-256-cfb",
+      "tag": "🇺🇸 آمریکا \r",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "179.49.5.114",
+      "server_port": 989,
+      "password": "f8f7aCzcPKbsF8p3",
+      "method": "aes-256-cfb",
+      "tag": "اکوادور 🇪🇨\r",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "179.27.200.28",
+      "server_port": 989,
+      "password": "f8f7aCzcPKbsF8p3",
+      "method": "aes-256-cfb",
+      "tag": "🇺🇾 اروگوئه \r",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "109.201.152.181",
+      "server_port": 443,
+      "password": "shadowsocks",
+      "method": "aes-128-cfb",
+      "tag": "هلند 🇳🇱\r",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "103.163.218.2",
+      "server_port": 989,
+      "password": "f8f7aCzcPKbsF8p3",
+      "method": "aes-256-cfb",
+      "tag": "🇻🇳 ویتنام \r",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "138.186.142.4",
+      "server_port": 989,
+      "password": "f8f7aCzcPKbsF8p3",
+      "method": "aes-256-cfb",
+      "tag": "🇵🇦 پاناما \r",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "190.103.176.29",
+      "server_port": 989,
+      "password": "f8f7aCzcPKbsF8p3",
+      "method": "aes-256-cfb",
+      "tag": "آرژانتین 🇦🇷\r",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "38.60.199.125",
+      "server_port": 989,
+      "password": "f8f7aCzcPKbsF8p3",
+      "method": "aes-256-cfb",
+      "tag": "سنگاپور 🇸🇬\r",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "170.80.111.6",
+      "server_port": 989,
+      "password": "f8f7aCzcPKbsF8p3",
+      "method": "aes-256-cfb",
+      "tag": "🇬🇹 گواتمالا \r",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "188.214.157.5",
+      "server_port": 989,
+      "password": "f8f7aCzcPKbsF8p3",
+      "method": "aes-256-cfb",
+      "tag": "🇲🇦 مراکش \r",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "38.60.246.5",
+      "server_port": 989,
+      "password": "f8f7aCzcPKbsF8p3",
+      "method": "aes-256-cfb",
+      "tag": "🇵🇭 فیلیپین \r",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "143.244.62.106",
+      "server_port": 989,
+      "password": "f8f7aCzcPKbsF8p3",
+      "method": "aes-256-cfb",
+      "tag": "🇦🇺 استرالیا \r",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "38.54.27.148",
+      "server_port": 989,
+      "password": "f8f7aCzcPKbsF8p3",
+      "method": "aes-256-cfb",
+      "tag": "🇧🇬 بلغارستان \r",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "78.141.216.41",
+      "server_port": 443,
+      "tls": {
+        "enabled": true
+      },
+      "password": "fokaS4id3bretay-7rit",
+      "obfs": {
+        "password": "fokaS4id3bretay-7rit"
+      },
+      "tag": "🎲x2@oneclickvpnkeys\r",
+      "type": "hysteria2"
+    },
+    {
+      "server": "172.66.46.233",
+      "server_port": 8443,
+      "tls": {
+        "enabled": true,
+        "server_name": "BaCHe-NaRo-Tu-KUNam.PaGes.DEV"
+      },
+      "transport": {
+        "path": "@V2rayi_net - Telegram : @V2rayi_net - Telegram : @V2rayi_net - Telegram : @V2rayi_net - Telegram : @V2rayi_net - Telegram : @V2rayi_net - Telegram : @V2rayi_net - Telegram : @V2rayi_net - Telegram : @V2rayi_net - Telegram : @V2rayi_net - Telegram : @V2rayi_net - Telegram : @V2rayi_net - Telegram : @V2rayi_net - Telegram : @V2rayi_net - Telegram : @V2rayi_net/?ed=2048",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "4d146643-979e-4656-aa78-9b8e18716f06",
+      "tag": "رایگان | VLESS | @forwardv2ray | CA🇨🇦 | 0️⃣7️⃣\r",
+      "type": "vless"
+    },
+    {
+      "server": "172.67.71.160",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "obdii.cfd"
+      },
+      "transport": {
+        "path": "/linkws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "رایگان | VMESS | @prrofile_purple | CA🇨🇦 | 0️⃣2️⃣",
+      "type": "vmess"
+    },
+    {
+      "server": "188.114.97.3",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "afrhms16v.bestxray.buzz"
+      },
+      "transport": {
+        "path": "/linkws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "f584de15-2034-4170-a723-f48c2bae5e0f",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "رایگان | VMESS | @customv2ray | US🇺🇸 | 0️⃣3️⃣",
+      "type": "vmess"
+    },
+    {
+      "server": "104.21.4.6",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "glweidf.cfd"
+      },
+      "transport": {
+        "path": "/linkws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "1052f24e-7b09-45eb-b0c5-d858eb124192",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "رایگان | VMESS | @prrofile_purple | CA🇨🇦 | 0️⃣5️⃣",
+      "type": "vmess"
+    },
+    {
+      "server": "190.93.247.155",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "janett.click"
+      },
+      "transport": {
+        "path": "/linkvws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "رایگان | VMESS | @vless_vmess | US🇺🇸 | 0️⃣2️⃣",
+      "type": "vmess"
+    },
+    {
+      "server": "162.159.135.79",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "janett.click"
+      },
+      "transport": {
+        "path": "/linkvws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "رایگان | VMESS | @vless_vmess | CA🇨🇦 | 0️⃣5️⃣",
+      "type": "vmess"
+    },
+    {
+      "server": "172.67.196.110",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "kellie.makeup"
+      },
+      "transport": {
+        "path": "/linkvws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "لندن 🇬🇧",
+      "type": "vmess"
+    },
+    {
+      "server": "104.16.216.241",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "nelly.homes"
+      },
+      "transport": {
+        "path": "/linkvws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "رایگان | VMESS | @v2Line | US🇺🇸 | 0️⃣3️⃣",
+      "type": "vmess"
+    },
+    {
+      "server": "172.67.152.214",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "meroiy.icu"
+      },
+      "transport": {
+        "path": "/linkvws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "رایگان | VMESS | @ROMAX_VPN | CA🇨🇦 | 0️⃣3️⃣",
+      "type": "vmess"
+    },
+    {
+      "server": "104.21.32.223",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "muriel.makeup"
+      },
+      "transport": {
+        "path": "/linkvws",
+        "type": "ws",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "packet_encoding": "xudp",
+      "security": "auto",
+      "alter_id": 0,
+      "tag": "رایگان | VMESS | @ROMAX_VPN | CA🇨🇦 | 0️⃣4️⃣",
+      "type": "vmess"
+    },
+    {
+      "server": "172.66.45.23",
+      "server_port": 8443,
+      "tls": {
+        "enabled": true,
+        "server_name": "BaCHe-NaRo-Tu-KUNam.PaGes.DEV"
+      },
+      "transport": {
+        "path": "/?ed=2048",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "4d146643-979e-4656-aa78-9b8e18716f06",
+      "tag": "رایگان | VLESS | @v2rayngvpn | CA🇨🇦 | 0️⃣4️⃣\r",
+      "type": "vless"
+    },
+    {
+      "server": "104.21.43.16",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "baipiao406.stunning-bassoon.pages.dev"
+      },
+      "transport": {
+        "path": "telegram-channel-proxy_mtm/?ed=2048",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "d342d11e-d424-4583-b36e-524ab1f0afa4",
+      "tag": "رایگان | VLESS | @v2rayng_vpnrog | CA🇨🇦 | 0️⃣1️⃣\r",
+      "type": "vless"
+    },
+    {
+      "server": "172.67.146.100",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "server_name": "baipiao163.stunning-bassoon.pages.dev"
+      },
+      "transport": {
+        "path": "Path/Telegram@V2ray_alpha/?ed=2048",
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "d342d11e-d424-4583-b36e-524ab1f0afa4",
+      "tag": "رایگان | VLESS | @ROMAX_VPN | US🇺🇸 | 0️⃣1️⃣\r",
+      "type": "vless"
+    }
+  ],
+  "route": {
+    "geoip": {
+      "download_url": "https://github.com/soffchen/sing-geoip/releases/latest/download/geoip.db",
+      "download_detour": "select"
+    },
+    "geosite": {
+      "download_url": "https://github.com/soffchen/sing-geosite/releases/latest/download/geosite.db",
+      "download_detour": "select"
+    },
+    "rules": [
+      {
+        "protocol": "dns",
+        "outbound": "dns-out"
+      },
+      {
+        "network": "udp",
+        "port": 443,
+        "outbound": "block"
+      },
+      {
+        "clash_mode": "direct",
+        "outbound": "direct"
+      },
+      {
+        "clash_mode": "global",
+        "outbound": "select"
+      },
+      {
+        "domain": [
+          "v2rayse.com",
+          "cfmem.com",
+          "vpnse.org",
+          "cff.pw",
+          "tt.vg"
+        ],
+        "outbound": "select"
+      },
+      {
+        "domain": [
+          "clash.razord.top",
+          "yacd.metacubex.one",
+          "yacd.haishan.me",
+          "d.metacubex.one"
+        ],
+        "outbound": "direct"
+      },
+      {
+        "geosite": [
+          "openai"
+        ],
+        "outbound": "🤖 OpenAI"
+      },
+      {
+        "geosite": [
+          "google",
+          "github"
+        ],
+        "geoip": [
+          "google"
+        ],
+        "outbound": "🌌 Google"
+      },
+      {
+        "geosite": [
+          "telegram"
+        ],
+        "geoip": [
+          "telegram"
+        ],
+        "outbound": "📟 Telegram"
+      },
+      {
+        "geosite": [
+          "twitter"
+        ],
+        "geoip": [
+          "twitter"
+        ],
+        "outbound": "🐦 Twitter"
+      },
+      {
+        "geosite": [
+          "facebook",
+          "instagram"
+        ],
+        "geoip": [
+          "facebook"
+        ],
+        "outbound": "👤 Facebook"
+      },
+      {
+        "geosite": [
+          "amazon"
+        ],
+        "outbound": "🛍️ Amazon"
+      },
+      {
+        "geosite": [
+          "apple-cn",
+          "apple"
+        ],
+        "outbound": "🍎 Apple"
+      },
+      {
+        "geosite": [
+          "microsoft"
+        ],
+        "outbound": "🧩 Microsoft"
+      },
+      {
+        "geosite": [
+          "category-games"
+        ],
+        "outbound": "🎮 Game"
+      },
+      {
+        "geosite": [
+          "bilibili"
+        ],
+        "outbound": "📺 Bilibili"
+      },
+      {
+        "geosite": [
+          "tiktok",
+          "netflix",
+          "hbo",
+          "disney",
+          "primevideo"
+        ],
+        "geoip": [
+          "netflix"
+        ],
+        "outbound": "🎬 MediaVideo"
+      },
+      {
+        "geosite": [
+          "geolocation-!cn"
+        ],
+        "outbound": "🌏 !cn"
+      },
+      {
+        "geosite": [
+          "cn"
+        ],
+        "geoip": [
+          "private",
+          "cn"
+        ],
+        "outbound": "🌏 cn"
+      },
+      {
+        "geosite": [
+          "category-ads-all"
+        ],
+        "outbound": "🛑 AdBlock"
+      }
+    ],
+    "auto_detect_interface": true,
+    "final": "select"
+  },
+  "experimental": {
+    "clash_api": {
+      "external_controller": "127.0.0.1:9090",
+      "external_ui": "ui",
+      "store_selected": true
+    }
+  }
+}
